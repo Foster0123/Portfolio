@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="icon" href="{{ url_for('static',
+    filename="public/favicon.ico") }}" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/main.css')}}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <script defer src="{{url_for('static', filename='js/main.js')}}"></script>
+    <title>Stylo</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <nav class="nav-container" id="navbar-container">
+        <section class="header">
+          <header class="title" id="header">Stylo</header>
+          <img
+            class="icon"
+            src="{{url_for('static', filename='img/style.png')}}"
+            alt="Logo icon" />
+        </section>
+
+        <ul class="link-container no-display" id="link-container">
+          <li class="link link-1">
+            <a href="/" class="navbar-nested-link">Home</a>
+          </li>
+          <li class="link link-2">
+            <a href="{{url_for('login')}}" class="navbar-nested-link">Login</a>
+          </li>
+          <li class="link link-3">
+            <a href="{{url_for('signup')}}" class="navbar-nested-link"
+              >Signup</a
+            >
+          </li>
+          <li class="link link-4">
+            <a href="#" class="navbar-nested-link">GitHub</a>
+          </li>
+        </ul>
+        <ul class="profile-container">
+          <li class="theme-btn">
+            <i class="bi bi-moon-stars" id="toggle-btn"></i>
+          </li>
+          <li class="profile-img-link">
+            <a href="{{url_for('account')}}" class="navbar-nested-link">
+              <img
+                class="profile-img"
+                src="{{url_for('static', filename='./img/img-1.jpg')}}"
+                alt="User Profile Image" />
+            </a>
+          </li>
+        </ul>
+        <ul class="utilities-container" id="hamburger">
+          <i class="fa-solid fa-hamburger"></i>
+        </ul>
+      </nav>
+    </div>
+    {% block content %} {% endblock %}
+  </body>
+</html>

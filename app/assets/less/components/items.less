@@ -1,0 +1,170 @@
+// <---------- Colors For Item Module ---------->
+
+@preview-item-bg-color: linear-gradient(
+  45deg,
+  rgba(0,0,0,0.3),
+  rgba(0,0,0,0.9)
+);
+
+// <---------- Styles For UserInfo Module ---------->
+:root {
+  --card-description-text-color: linear-gradient(45deg, #fb0094, #00f, #0f0, 
+  #ff0, #f00, #fb0094, #00f, #0f0, #ff0, #f00);
+}
+
+.card-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+
+.card {
+  background: @preview-item-bg-color;
+  border-radius: 10px;
+  box-shadow: 0 0 0 #000;
+  margin: 10px;
+  padding: 5px;
+  transition: box-shadow 0.2s ease-in-out;
+  width: 20em;
+
+  &:hover {
+    box-shadow: 0 0 20px #000;
+    transition: box-shadow 0.2s ease-in-out;
+  }
+}
+
+.card-header {
+  color: #fff;
+  font-family: Tangerine, sans-serif;
+  font-size: 3em;
+  font-stretch: condensed;
+  font-weight: bolder;
+  padding: 0;
+  text-align: center;
+}
+
+.card-image {
+  border-radius: 10px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.description {
+  background: rgb(255 255 255 / 90%);
+  background-clip: text;
+  font-family: Nunito, sans-serif;
+  font-family: Roboto, sans-serif;
+  font-size: 1.2em;
+  font-weight: bolder;
+  padding: 5px;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-group {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+.codepen-btn {
+  background: none;
+  border-radius: 10px;
+  float: right;
+  font-size: 1.2em;
+  padding: 10px 5px;
+  transition: background, 300ms ease-in-out;
+
+  &:hover {
+    background: var(--card-description-text-color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px #fff;
+    transition: background, 300ms ease-in-out;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.icon-group {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.like-btn {
+  background: none;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 30px;
+  outline: none;
+  padding: 0;
+  transition: color, text-shadow 200ms ease-in-out;
+
+  &:hover {
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+    transition: text-shadow, color 200ms ease-in-out;
+  }
+}
+
+#arrow-vertical {
+  transition: visibility 100ms ease-in-out;
+}
+
+// <---------- Animations For Preview Module ---------->
+
+// <---------- Media Queries For Preview Module --------->
+
+@media only screen and (max-width: 1280px) {
+  .item-container {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .item-container {
+    grid-template-columns: auto;
+  }
+
+  .card-container {
+    .card {
+      width: 18em;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card-container {
+    .card {
+      margin: 0;
+      width: 19em;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .card-container {
+    .card {
+      width: 95%;
+    }
+  }
+  .btn-group {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-html"],
+  "overrides": [
+    {
+      "files": ["app/assets/less/**/*.less"],
+      "customSyntax": "postcss-less",
+      "plugins": [
+        "stylelint-order"
+      ],
+      "rules": {
+        "order/order": [
+          "custom-properties",
+          "declarations"
+        ],
+        "order/properties-alphabetical-order": true
+      }
+    },
+    {
+      "files": ["app/templates/**/*.html"],
+      "customSyntax": "postcss-html"
+    }
+  ]
+}
