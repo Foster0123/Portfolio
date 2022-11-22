@@ -2,7 +2,7 @@
   "extends": ["stylelint-config-standard", "stylelint-config-html"],
   "overrides": [
     {
-      "files": ["app/assets/less/**/*.less"],
+      "files": ["src/client/assets/less/**/*.less"],
       "customSyntax": "postcss-less",
       "plugins": [
         "stylelint-order"
@@ -16,7 +16,7 @@
       }
     },
     {
-      "files": ["app/templates/**/*.html"],
+      "files": ["src/client/views/**/*.html"],
       "customSyntax": "postcss-html"
     }
   ]

@@ -1,4 +1,29 @@
 {
     "typescript.tsdk": "node_modules/typescript/lib",
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "basic",
+    "cSpell.words": [
+        "adipisicing",
+        "amet",
+        "codepen",
+        "Codepen",
+        "consectetur",
+        "cssnano",
+        "eaque",
+        "elit",
+        "Foss",
+        "fullhuman",
+        "Gulpfile",
+        "imgbuild",
+        "Molestias",
+        "pariatur",
+        "pipenv",
+        "purgecss",
+        "quisquam",
+        "reprehenderit",
+        "Signup",
+        "stylelint",
+        "Stylo",
+        "userinfo",
+        "velit"
+    ]
 }
