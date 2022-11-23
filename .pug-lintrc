@@ -1,6 +1,7 @@
 module.exports = {
+	// Enabled Rules
 	disallowAttributeConcatenation: true,
-	disallowAttributeInterpolation: false,
+	disallowAttributeInterpolation: true,
 	disallowClassAttributeWithStaticValue: true,
 	disallowClassLiteralsBeforeIdLiterals: true,
 	disallowDuplicateAttributes: true,

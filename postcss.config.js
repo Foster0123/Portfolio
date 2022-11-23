@@ -18,6 +18,6 @@ export default {
   plugins: [
     purgeCSSPlugin(purgeCssOptions),
     autoprefixer(),
-    cssnanoPlugin({})
+    cssnanoPlugin()
   ]
 }

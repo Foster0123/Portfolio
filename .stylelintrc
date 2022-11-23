@@ -1,5 +1,5 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-html"],
+  "extends": ["stylelint-config-standard"],
   "overrides": [
     {
       "files": ["src/client/assets/less/**/*.less"],
@@ -14,10 +14,6 @@
         ],
         "order/properties-alphabetical-order": true
       }
-    },
-    {
-      "files": ["src/client/views/**/*.html"],
-      "customSyntax": "postcss-html"
     }
   ]
 }

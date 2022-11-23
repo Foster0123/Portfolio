@@ -1,0 +1,94 @@
+@footer-background-color:rgba(0,0,0,0.7);
+.footer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 5px!important;
+    display: flex;
+}
+.footer {
+    padding: 10px;
+    width: 99%;
+    background-color: @footer-background-color;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    border-radius: 5px 5px 0 0;
+}
+.footer-title-section {
+    color: white;
+    header {
+        font-family: @redhatmono;
+        font-size: x-large;
+        margin-bottom: 10px;
+        sup {
+            font-size: 15px;
+        }
+        i {
+            margin-right: 5px;
+        }   
+    }
+}
+.footer-body-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.footer-link-section {
+    list-style-type: none;
+    .footer-link {
+        a {
+            color: white;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+
+            i {
+                margin-right: 10px;
+                color: white;
+            }
+        }
+    }
+    .footer-link-title {
+        display: flex;
+        align-items: center;
+        color: white;
+        i {
+            font-size: 1.5em;
+        }
+    }
+}
+.footer-end-section {
+    text-align: center;
+    width: 98%;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 0 0 5px 5px;
+    color: white;
+    background-color: @footer-background-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: @montserrat-alternates;
+    header {
+        margin-right: 5px;
+    }
+    i {
+        margin: 0 2.5px 0 5px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .footer-end-section {
+        border-radius:0 0 10px 10px;
+    }
+    .footer {
+        width: 98%;
+    }
+}
