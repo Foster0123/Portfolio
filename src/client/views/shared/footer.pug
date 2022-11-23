@@ -6,30 +6,32 @@ footer.footer-container
                 | Stylo
                 sup
                     i.bi.bi-badge-tm
-            p 
-                | Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis iste dicta voluptatem voluptate nesciunt dolorum quos quas veritatis sint earum!
+            p.footer-title-text
+                |
+                | Personal Portfolio Site
         .footer-body-section
             ul.footer-link-section
                 li.footer-link-title
-                    i.bi.bi-link-45deg
+                    svg#footer-link-title-icon
+                        use(href='./assets/img/feather-sprite.svg#link-2' crossorigin="anonymous")
                     p.footer-link-title-text
-                        | References
+                        | External
+                li.footer-link
+                    a(href='#')
+                        i.fa-brands.fa-codepen
+                        | Codepen
                 li.footer-link
                     a(href='#')
                         i.bi.bi-book
-                        | Link-1
-                li.footer-link
-                    a(href='#')
-                        i.bi.bi-book
-                        | Link-2
+                        | Scrimba
                 li.footer-link
                     a(href='#')
                         i.bi.bi-book
                         | Link-3
                 li.footer-link
                     a(href='#')
-                        i.bi.bi-book
-                        | Link-4
+                        i.fa-brands.fa-github
+                        | GitHub
             ul.footer-info-section
                 li.footer-info-title
                     i.bi.bi-info-circle-fill
@@ -38,15 +40,19 @@ footer.footer-container
                 li.footer-info
                     p
                         i.bi.bi-geo-alt-fill
-                        | Location
+                        | India
                 li.footer-info
                     p
-                        i.bi.bi-geo-alt-fill
-                        | Location
+                        i.bi.bi-telephone
+                        | + 91 7044560210
                 li.footer-info
                     p
-                        i.bi.bi-geo-alt-fill
-                        | Location
+                        i.bi.bi-envelope
+                        | fosterunlimited0123@gmail.com
+                li.footer-info
+                    p
+                        i.bi.bi-globe
+                        | www.stylo.com
 
     .footer-end-section
         header Copyright
@@ -55,4 +61,5 @@ footer.footer-container
             sup
                 i.bi.bi-r-circle
         header 
+            |
             | Foss & Teams

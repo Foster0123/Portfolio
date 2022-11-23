@@ -62,7 +62,8 @@
     align-items: center;
     color: @header-color;
     display: flex;
-    font-family: @nunito;
+    font-family: @tangerine;
+    font-weight: bolder;
     font-size: 2em;
     justify-content: space-between;
     margin-left: 10px;
@@ -70,7 +71,7 @@
     i#icon {
         font-size: 1em;
         margin-right: 5px;
-        color: black;
+        color: white;
     }
     #icon {
         width: 40px;
@@ -90,20 +91,25 @@
     transition: opacity, 200ms ease-in-out;
 
     .link {
+        transform: rotate(0deg);
+        transition: transform 500ms ease-in-out;
         .navbar-nested-link {
             background: none;
             border-radius: 10px;
             color: @nav-link-color;
-            margin: 0 10px;
+            margin: 0 2.5px;
             outline: none;
             padding: 10px;
             text-decoration: none;
             transition: background, @hover-fade-out-duration ease-in-out;
-
             &:hover {
                 background: @link-hover-bg-color;
                 transition: background, @hover-fade-out-duration ease-in-out;
             }
+        }
+        &:hover {
+            transform: rotate(360deg);
+            transition: transform 500ms ease-in-out;
         }
     }
 
@@ -119,7 +125,7 @@
     list-style-type: none;
     position: absolute;
     right: 10px;
-    top: 7px;
+    top: 9px;
     transition: margin-right, 0.2s ease-in-out;
 
     .profile-img-link {
@@ -208,9 +214,11 @@
 
 // <---------- Media Queries For Navbar Module --------->
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .link-container {
         align-items: center;
+        background-color: rgba(78, 78, 78, 0.253);
+        border: 1px solid white;
         border-radius: 20px;
         display: block;
         flex-direction: column;
@@ -228,36 +236,29 @@
             margin: 0;
             text-align: center;
             width: 100%;
-
+            &:hover {
+                transform: rotateX(360deg);
+                transition: transform 500ms ease-in-out;
+            }
             .navbar-nested-link {
                 display: inline-block;
                 margin: 0;
                 width: 100%;
             }
         }
-
-        .link-1 {
+        .link:first-child {
             .navbar-nested-link {
                 border-radius: @top-link-border-radius;
             }
         }
-
-        .link-2 {
-            .navbar-nested-link {
-                border-radius: 0;
-            }
-        }
-
-        .link-3 {
-            .navbar-nested-link {
-                border-radius: 0;
-            }
-        }
-
-        .link-4 {
+        .link:last-child {
             .navbar-nested-link {
                 border-radius: @bottom-link-border-radius;
-                margin: 0;
+            }
+        }
+        .middle-link {
+            .navbar-nested-link {
+                border-radius: 0;
             }
         }
     }

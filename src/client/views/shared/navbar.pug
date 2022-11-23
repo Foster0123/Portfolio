@@ -2,17 +2,19 @@
     nav#navbar-container.nav-container
         section.header
             //- i#icon.fa-brands.fa-redhat
-            img#icon(src="./assets/img/crystal.png", alt="Crystal Icon")
+            img#icon(src='./assets/img/redhat.svg', alt='Crystal Icon')
             header#header.title Stylo
         ul#link-container.link-container.no-display
-            li.link.link-1
+            li.link
                 a.navbar-nested-link(href='#') Home
-            li.link.link-2
-                a.navbar-nested-link(href='#') Login
-            li.link.link-3
-                a.navbar-nested-link(href='#') Signup
-            li.link.link-4
-                a.navbar-nested-link(href='#') GitHub
+            li.link.middle-link
+                a.navbar-nested-link(href='#') About
+            li.link.middle-link
+                a.navbar-nested-link(href='#') Experiences
+            li.link.middle-link
+                a.navbar-nested-link(href='#') Works
+            li.link.middle-link
+                a.navbar-nested-link(href='#') Gallery
         ul.profile-container
             li.theme-btn
                 i#toggle-btn.bi.bi-moon-stars
