@@ -3,13 +3,13 @@ const linkList = document.getElementById('link-container')
 
 // Hamburger Button Related Code
 hamburger.addEventListener('click', () => {
-    linkList.classList.toggle('no-display')
+    linkList.classList.toggle('display-navbar');
 })
 
-window.addEventListener('', () => {
-    if (window.innerWidth > 600) {
-        linkList.classList.remove('no-display')
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 800) {
+        linkList.classList.remove('display-navbar')
     } else {
-        linkList.classList.add('no-display')
+        linkList.classList.add('display-navbar')
     }
 })

@@ -1,0 +1,24 @@
+extends ../templates/base.pug
+
+block title
+    | Resume
+block content
+    .resume-container
+        .resume
+            section.resume-header-section 
+                |
+                header.resume-header
+                    i.bi.bi-file-earmark-person-fill.resume-header-icon
+                    p.resume-header-title CV Resume
+            section.resume-content-section
+                p.resume-content-text
+                | Resume Can Be Downloaded Here
+            section.resume-download-section 
+                |
+                button.resume-download-button
+                    a(
+                        href='./../../assets/docs/Developer-Resume.pdf',
+                        download
+                    )
+                        i.bi.bi-cloud-arrow-down-fill
+                        | Download CV

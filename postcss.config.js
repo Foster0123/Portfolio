@@ -17,14 +17,15 @@ const purgeCssOptions = {
     "no-display", 
     "theme", 
     "dark-theme", 
-    "light-theme"
+    "light-theme",
+    "display-navbar"
   ],
   keyframes:true
 }
 
 export default {
   plugins: [
-    purgeCSSPlugin(purgeCssOptions),
+    // purgeCSSPlugin(purgeCssOptions),
     autoprefixer(),
     cssnanoPlugin()
   ]

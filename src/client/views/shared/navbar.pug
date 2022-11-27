@@ -1,20 +1,20 @@
 nav.navbar-container
     #navbar-container.navbar
-        section.header-section
+        section.navbar-header-section
             i#icon.fa-brands.fa-redhat
-            header#header.title Stylo
-        ul#link-container.link-container.navlink-section
-            li.link
-                a.navbar-nested-link(href='//') Home
-            li.link.middle-link
-                a.navbar-nested-link(href='./../html/about.html') About
-            li.link.middle-link
-                a.navbar-nested-link(href='#') CV Resume
-            li.link.middle-link
-                a.navbar-nested-link(href='#') Experiences
-            li.link.middle-link
-                a.navbar-nested-link(href='#') Works
-        ul.profile-container
+            header#header.header-section-title Stylo
+        ul#link-container.navbar-link-section
+            li.navbar-link
+                a.navbar-nested-link(href='/') Home
+            li.navbar-link.navbar-middle-link
+                a.navbar-nested-link(href='./about.html') About
+            li.navbar-link.navbar-middle-link
+                a.navbar-nested-link(href='./resume.html') CV Resume
+            li.navbar-link.navbar-middle-link
+                a.navbar-nested-link(href='./progress.html') Progress
+            li.navbar-link.navbar-middle-link
+                a.navbar-nested-link(href='./services.html') Services
+        ul.navbar-btn-container
             li.theme-btn
                 i#toggle-btn.bi.bi-moon
             li.menu
