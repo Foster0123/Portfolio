@@ -7,31 +7,40 @@ footer.footer-container
                 sup
                     i.bi.bi-badge-tm
             p.footer-title-text
-                |
                 | Personal Portfolio Site
         .footer-body-section
             ul.footer-link-section
                 li.footer-link-title
                     svg#footer-link-title-icon
-                        use(href='./assets/img/feather-sprite.svg#link-2' crossorigin="anonymous")
+                        use(
+                            href='./assets/img/feather-sprite.svg#link-2',
+                            crossorigin='anonymous'
+                        )
                     p.footer-link-title-text
                         | External
                 li.footer-link
                     a(href='#')
                         i.fa-brands.fa-codepen
-                        | Codepen
+                        | CodePen
+                        i.external.external-1.bi.bi-box-arrow-up-right
                 li.footer-link
                     a(href='#')
-                        i.bi.bi-book
+                        svg 
+                            |
+                            |
+                            use(href='./assets/img/scrimba.svg#scrimba')
                         | Scrimba
+                        i.external.external-2.bi.bi-box-arrow-up-right
                 li.footer-link
                     a(href='#')
-                        i.bi.bi-book
-                        | Link-3
+                        i.fa-regular.fa-square
+                        | CodeSandBox
+                        i.external.external-3.bi.bi-box-arrow-up-right
                 li.footer-link
                     a(href='#')
                         i.fa-brands.fa-github
                         | GitHub
+                        i.external.external-4.bi.bi-box-arrow-up-right
             ul.footer-info-section
                 li.footer-info-title
                     i.bi.bi-info-circle-fill
@@ -43,16 +52,16 @@ footer.footer-container
                         | India
                 li.footer-info
                     p
+                        i.bi.bi-globe
+                        | www.stylo.com
+                li.footer-info
+                    p
                         i.bi.bi-telephone
                         | + 91 7044560210
                 li.footer-info
                     p
                         i.bi.bi-envelope
                         | fosterunlimited0123@gmail.com
-                li.footer-info
-                    p
-                        i.bi.bi-globe
-                        | www.stylo.com
 
     .footer-end-section
         header Copyright
@@ -61,5 +70,6 @@ footer.footer-container
             sup
                 i.bi.bi-r-circle
         header 
+            |
             |
             | Foss & Teams

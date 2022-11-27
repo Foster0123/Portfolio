@@ -9,10 +9,9 @@
     "scripts": {
         "dev": "vite --host",
         "preview": "vite preview",
-        "lint:pug": "gulp --tasks",
         "lint:less": "stylelint --fix src/client/assets/less/**/*.less",
         "lint:js": "eslint --fix src/client/assets/js/**/*.js",
-        "lint": "yarn lint:pug & yarn lint:less & yarn lint:js",
+        "lint": "yarn lint:less & yarn lint:js",
         "format": "prettier --write src/client/views/**/*.pug src/client/assets/less/**/*.less src/client/assets/js/**/*.js",
         "build": "vite build"
     },

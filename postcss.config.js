@@ -11,7 +11,15 @@ const pugSrcCode = ['src/client/views/**/*.pug']
 // Configuration Options
 
 const purgeCssOptions = {
-  content: pugSrcCode
+  content: pugSrcCode,
+  safelist:[
+    "display", 
+    "no-display", 
+    "theme", 
+    "dark-theme", 
+    "light-theme"
+  ],
+  keyframes:true
 }
 
 export default {

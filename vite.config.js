@@ -6,7 +6,7 @@ export default defineConfig({
     root: 'src/client',
     publicDir: 'public',
     build:{
-        outDir:"../../build"
+        outDir:"../../build",
     },
     plugins: [
         vitePugPlugin(),

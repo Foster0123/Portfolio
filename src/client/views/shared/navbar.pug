@@ -1,22 +1,21 @@
-.navbar
-    nav#navbar-container.nav-container
-        section.header
-            //- i#icon.fa-brands.fa-redhat
-            img#icon(src='./assets/img/redhat.svg', alt='Crystal Icon')
+nav.navbar-container
+    #navbar-container.navbar
+        section.header-section
+            i#icon.fa-brands.fa-redhat
             header#header.title Stylo
-        ul#link-container.link-container.no-display
+        ul#link-container.link-container.navlink-section
             li.link
-                a.navbar-nested-link(href='#') Home
+                a.navbar-nested-link(href='//') Home
             li.link.middle-link
-                a.navbar-nested-link(href='#') About
+                a.navbar-nested-link(href='./../html/about.html') About
+            li.link.middle-link
+                a.navbar-nested-link(href='#') CV Resume
             li.link.middle-link
                 a.navbar-nested-link(href='#') Experiences
             li.link.middle-link
                 a.navbar-nested-link(href='#') Works
-            li.link.middle-link
-                a.navbar-nested-link(href='#') Gallery
         ul.profile-container
             li.theme-btn
-                i#toggle-btn.bi.bi-moon-stars
-        ul#hamburger.utilities-container
-            i.fa-solid.fa-hamburger
+                i#toggle-btn.bi.bi-moon
+            li.menu
+                i#hamburger.fa-solid.fa-hamburger
