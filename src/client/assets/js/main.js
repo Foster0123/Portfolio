@@ -3,7 +3,7 @@ const linkList = document.getElementById('link-container')
 
 // Hamburger Button Related Code
 hamburger.addEventListener('click', () => {
-    linkList.classList.toggle('display-navbar');
+    linkList.classList.toggle('hide-navbar');
 })
 
 window.addEventListener('resize', () => {
@@ -12,4 +12,9 @@ window.addEventListener('resize', () => {
     } else {
         linkList.classList.add('display-navbar')
     }
+})
+
+var db = new PouchDB('client-database', {adapter: 'memory'});
+db.info().then((info) => {
+    console.log(info);
 })
