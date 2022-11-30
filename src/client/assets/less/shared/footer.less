@@ -145,9 +145,9 @@
             width: 150px;
 
             &:hover {
-                color: cyan;
-                filter: drop-shadow(0 10px 20px cyan);
-                text-shadow: 0 0 20px cyan;
+                color: var(--footer-link-text-shadow-color);
+                filter: drop-shadow(0 0px 20px var(--footer-link-text-shadow-color));
+                text-shadow: 0 0 20px var(--footer-link-text-shadow-color);
                 transition: color, text-shadow, filter 200ms ease-in-out;
             }
 
@@ -155,17 +155,10 @@
                 color: white;
                 margin-right: 10px;
             }
-
-            svg {
-                border-radius: 10px;
-                fill: var(--dark-theme-scrimba-icon-color);
-                height: 20px;
-                left: -3px;
-                margin-right: 5px;
+            #fiddle {
                 position: relative;
-                width: 20px;
+                left: -1.5px;
             }
-
             .external {
                 position: relative;
             }

@@ -1,9 +1,9 @@
 extends ../templates/base.pug
-
 block title
     | Progress
 block content
-    .progress-container 
-        |
-        .progress
+    .card-container
+        .cards
             include ../components/progress-card.pug
+            +progress-card
+            +progress-card

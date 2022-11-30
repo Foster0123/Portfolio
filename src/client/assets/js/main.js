@@ -13,8 +13,3 @@ window.addEventListener('resize', () => {
         linkList.classList.add('display-navbar')
     }
 })
-
-var db = new PouchDB('client-database', {adapter: 'memory'});
-db.info().then((info) => {
-    console.log(info);
-})
