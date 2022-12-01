@@ -18,9 +18,9 @@ const purgeCssOptions = {
     "theme", 
     "dark-theme", 
     "light-theme",
-    "display-navbar"
-  ],
-  keyframes:true
+    "display-navbar",
+    "animate-theme-button"
+  ]
 }
 
 export default {

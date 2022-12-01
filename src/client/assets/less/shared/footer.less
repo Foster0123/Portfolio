@@ -7,7 +7,7 @@
 }
 
 .footer {
-    background-color: var(--dark-theme-component-background-color);
+    background-color: var(--navbar-background);
     border-radius: 5px 5px 0 0;
     display: grid;
     gap: 10px;
@@ -15,14 +15,18 @@
     padding: 10px;
     margin-top: 5px;
     width: var(--component-width);
+    color: var(--component-foreground);
 }
 .footer-social-media-section {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 99.5%;
-    background-color: var(--dark-theme-component-background-color);
+    background-color: var(--navbar-background);
     height: 40px;
+    a {
+        color: inherit;
+    }
     i {
         padding: 2.5px 5px 2.5px 5px;
         font-size: 1.1em;
@@ -51,12 +55,12 @@
 }
 .footer-end-section {
     align-items: center;
-    background-color: var(--dark-theme-component-background-color);
+    background-color: var(--navbar-background);
     border-radius: 0 0 5px 5px;
-    color: white;
     display: flex;
     flex-direction: column;
     font-family: @montserrat-alternates;
+    font-weight: bolder;
     justify-content: center;
     margin-bottom: 5px;
     padding: 5px;
@@ -74,27 +78,25 @@
 }
 
 .footer-title-section {
+    color: inherit;
     .footer-title {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        
         header {
-            color: var(--dark-theme-foreground-color);
             font-family: @tangerine;
             font-size: 2.5em;
             letter-spacing: -2px;
             margin-bottom: 10px;
             i {
-                color: var(--dark-theme-logo-color);
+                color: inherit;
                 font-size: 0.8em;
                 margin-right: 5px;
             }
     
             sup {
                 font-size: 20px;
-                i {
-                    color: var(--dark-theme-foreground-color);
-                }
             }
         }
     }
@@ -107,11 +109,10 @@
 }
 
 .footer-info-section {
-    color: white;
     list-style-type: none;
 
     .footer-info-title {
-        background-color: rgb(0 0 0 / 90%);
+        background-color: var(--component-background);
         border-radius: 10px;
         display: flex;
         padding: 10px;
@@ -144,26 +145,13 @@
 
     .footer-link-title {
         align-items: center;
-        background-color: rgb(0 0 0 / 90%);
+        background-color: var(--component-background);
         border-radius: 10px;
-        color: white;
         display: flex;
         padding: 10px;
-
         i {
             font-size: 1em;
-            margin-right: 10px;
-        }
-
-        svg {
-            fill: none;
-            height: 20px;
             margin-right: 5px;
-            stroke: white;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-width: 2;
-            width: 20px;
         }
     }
 
@@ -174,7 +162,7 @@
 
         a {
             align-items: center;
-            color: white;
+            color: inherit;
             display: flex;
             text-decoration: none;
             transition: color, 200ms ease-in-out;
@@ -188,7 +176,6 @@
             }
 
             i {
-                color: white;
                 margin-right: 10px;
             }
             #fiddle {

@@ -1,8 +1,5 @@
 // <---------- Variables For Navbar Module ---------->
-@hover-fade-out-duration: 100ms;
-@link-list-width: 160px;
-@top-link-border-radius: 20px 20px 0 0;
-@bottom-link-border-radius: 0 0 20px 20px;
+
 
 // <---------- Styles For Navbar Module ---------->
 
@@ -15,7 +12,7 @@
 
 .navbar {
     align-items: center;
-    background: var(--dark-theme-component-background-color);
+    background: var(--navbar-background);
     border-radius: 30px;
     display: flex;
     justify-content: space-between;
@@ -25,11 +22,11 @@
     transition: background, var(--transition-duration) ease-in-out;
     width: var(--component-width);
     z-index: 10;
+    color: var(--component-foreground);
 }
 
 .navbar-header-section {
     align-items: center;
-    color: var(--dark-theme-foreground-color);
     cursor: pointer;
     display: flex;
     font-family: @tangerine;
@@ -45,7 +42,7 @@
         animation: header-title 1s infinite;
         animation-delay: 0ms;
         animation-timing-function: linear;
-        text-shadow: 0 0 20px var(--dark-theme-title-color);
+        text-shadow: 0 0 20px var(--title-color);
         transition: text-shadow var(--transition-duration) ease-in-out;
     }
 
@@ -70,24 +67,25 @@
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    margin-right: 50px;
+    margin-right: 60px;
     opacity: 1;
     outline: none;
     transition: opacity, var(--transition-duration) ease-in-out;
 
     .navbar-link {
         transform: translateY(0);
-        transition: transform var(--transition-duration) ease-in-out;
+        transition: transform, text-shadow, var(--transition-duration) ease-in-out;
 
         &:hover {
             transform: translateY(5px);
-            transition: transform var(--transition-duration) ease-in-out;
+            text-shadow: 0 0 10px var(--nav-link-foreground);
+            transition: transform, text-shadow, var(--transition-duration) ease-in-out;
         }
 
         .navbar-nested-link {
             background: none;
             border-radius: 10px;
-            color: var(--dark-theme-nav-link-foreground-color);
+            color: var(--nav-link-foreground);
             margin: 0 2.5px;
             outline: none;
             padding: 10px;
@@ -95,7 +93,7 @@
             transition: background, var(--transition-duration) ease-in-out;
 
             &:hover {
-                background: var(--dark-theme-nav-link-background-color);
+                background: var(--nav-link-background);
                 transition: background, var(--transition-duration) ease-in-out;
             }
         }
@@ -109,71 +107,91 @@
     list-style-type: none;
     position: absolute;
     right: 10px;
-    top: 5px;
+    top: 8px;
     transition: margin-right, var(--transition-duration) ease-in-out;
 
     .theme-btn {
         border-radius: 50%;
         font-size: 33px;
-        padding: 5px 5px 2.5px;
-        text-shadow: 0 0 0 #fff;
+        background-color: var(--theme-button-background);
+        padding: 2.5px 5px .5px 5px;
+        margin-right: 5px;
+        text-shadow: 0 0 0 var(--theme-button-text-shadow);
         transition: text-shadow var(--transition-duration) ease-in-out;
         cursor: pointer;
         &:hover {
-            text-shadow: 0 0 10px #fff;
+            text-shadow: 0 0 10px var(--theme-button-text-shadow);
             transition: text-shadow var(--transition-duration) ease-in-out;
         }
+        i {
+            color: inherit;
+        }
     }
-
     .menu {
-        background: none;
+        background-color: var(--theme-button-background);
         border-radius: 50%;
         display: none;
         font-size: 33px;
         padding: 1px 5px;
         cursor: pointer;
+        i {
+            color: inherit;
+        }
     }
 }
-i {
-    color: white;
+.animate-theme-button {
+    animation-name: animate-theme-button!important;
+    animation-duration: 0.3s;
+    transition: animation-name, 200ms ease-in-out;
 }
 
 // <---------- Animations For Navbar Module ---------->
-
 @keyframes header-title {
     0% {
-        text-shadow: 0 0 10px rebeccapurple;
+        text-shadow: 0 0 10px var(--header-title-text-shadow);
         transform: translateY(0);
         transition: transform, var(--transition-duration) linear;
         transition-delay: 0s;
     }
 
     25% {
-        text-shadow: 0 0 20px rebeccapurple;
+        text-shadow: 0 0 20px var(--header-title-text-shadow);
         transform: translateY(2.5px);
         transition: transform, var(--transition-duration) linear;
         transition-delay: 0s;
     }
 
     50% {
-        text-shadow: 0 0 25px rebeccapurple;
+        text-shadow: 0 0 25px var(--header-title-text-shadow);
         transform: translateY(0);
         transition: transform, var(--transition-duration) linear;
         transition-delay: 0s;
     }
 
     75% {
-        text-shadow: 0 0 20px rebeccapurple;
+        text-shadow: 0 0 20px var(--header-title-text-shadow);
         transform: translateY(-2.5px);
         transition: transform, var(--transition-duration) linear;
         transition-delay: 0s;
     }
 
     100% {
-        text-shadow: 0 0 10px rebeccapurple;
+        text-shadow: 0 0 10px var(--header-title-text-shadow);
         transform: translateY(0);
         transition: transform, var(--transition-duration) linear;
         transition-delay: 0s;
+    }
+}
+
+@keyframes animate-theme-button {
+    0% {
+        transform:scale(0);
+    }
+    50% {
+        transform:scale(1.5);
+    }
+    100% {
+        transform:scale(1.0);
     }
 }
 
@@ -186,7 +204,7 @@ i {
 
     .navbar-link-section {
         align-items: center;
-        background: var(--dark-theme-component-background-color);
+        background: var(--navbar-background);
         border-radius: 20px;
         flex-direction: column;
         height: auto;
@@ -196,10 +214,10 @@ i {
         right: -200px;
         top: 60px;
         transition: width, box-shadow, right, var(--transition-duration) ease-in-out;
-        width: @link-list-width;
+        width: var(--mobile-navlist-width);
 
         &:hover {
-            box-shadow: 0 0 10px var(--navbar-link-section-box-shadow-color);
+            box-shadow: 0 0 10px var(--navbar-background);
             transition: box-shadow var(--transition-duration) ease-in-out;
         }
 
@@ -219,7 +237,7 @@ i {
                 width: 100%;
 
                 &::before {
-                    background-color: var(--dark-theme-nav-link-background-color);
+                    background-color: var(--nav-link-background);
                     bottom: 0;
                     content: '';
                     left: 0;
@@ -246,25 +264,24 @@ i {
 
         .navbar-link:first-child {
             .navbar-nested-link {
-                border-radius: @top-link-border-radius;
+                border-radius: var(--top-link-border-radius);
             }
 
             .navbar-nested-link::before {
-                border-radius: @top-link-border-radius;
+                border-radius: var(--top-link-border-radius);
             }
         }
 
         .navbar-link:last-child {
             .navbar-nested-link {
-                border-radius: @bottom-link-border-radius;
+                border-radius: var(--bottom-link-border-radius);
             }
 
             .navbar-nested-link::before {
-                border-radius: @bottom-link-border-radius;
+                border-radius: var(--bottom-link-border-radius);
             }
         }
     }
-
     .navbar-btn-container {
       .menu {
         display: inline-block;

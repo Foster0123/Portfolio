@@ -1,12 +1,10 @@
-:root {
-    --about-section-titles-font-size: 1.5em;
-}
 .about-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .about {
+    color: var(--component-foreground);
     width: 99%;
     display: grid;
     row-gap: 5px;
@@ -20,7 +18,7 @@
 }
 .about-intro {
     grid-area: intro;
-    background-color: var(--dark-theme-component-background-color);
+    background-color: var(--component-background);
     padding: 10px;
     border-radius: 5px 5px 10px 10px;
     .about-intro-header-section {
@@ -59,7 +57,7 @@
 }
 .about-info {
     grid-area: info;
-    background-color: var(--dark-theme-component-background-color);
+    background-color:var(--component-background);
     padding: 10px;
     border-radius: 10px;
     text-align: center;
@@ -82,7 +80,7 @@
 }
 .about-contact {
     grid-area: contact;
-    background-color: var(--dark-theme-component-background-color);
+    background-color: var(--component-background);
     padding: 10px;
     border-radius: 5px 5px 10px 10px;
     .about-contact-header-section {
