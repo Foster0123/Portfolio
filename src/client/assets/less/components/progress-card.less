@@ -1,24 +1,44 @@
 .tilting-card-content {
-    --perspective: 500px;
+    --perspective: 500px; /* set --perspective to 500px */ 
     --rotateX: 0;
     --rotateY: 0;
     --angle: 15deg;
-  
     position: relative;
     display: grid;
     place-content: center;
     text-align: center;
-    box-shadow: var(--shadow);
+    border-radius: 5px;
     padding: 10px;
-    color: black;
-    background-color: rebeccapurple;
-    transform: perspective(var(--perspective)) rotateX(var(--rotateX))
-      rotateY(var(--rotateY));
-    transition: transform 350ms ease;
-    img {
-        width: 100%;
+    color: var(--dark-theme-component-foreground-color);
+    background-color: var(--dark-theme-component-background-color);
+    transform: 
+          perspective(var(--perspective)) 
+          rotateX(var(--rotateX))
+          rotateY(var(--rotateY));
+    transition: transform 300ms ease;
+    .tilting-card-body {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+        img {
+        	width: 100%;
+        	height: auto;
+        	border-radius: 5px;
+        	object-fit: cover;
+    	}
+    	header {
+      		font-family: @opensans;
+    	}
+    	p {
+      		font-family: @opensans;
+    	}
+		progress {
+			width: 100%;
+    		padding: 0;
+    		margin: 0;
+		}
     }
-  }
+}
   .mouse-position-tracker {
     position: absolute;
     inset: 0;

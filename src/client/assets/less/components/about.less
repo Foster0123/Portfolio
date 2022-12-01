@@ -12,10 +12,11 @@
     row-gap: 5px;
     column-gap: 5px;
     grid-template-areas: 
-    "intro info contact"
-    "intro info contact"
-    "intro info contact";
-    grid-template-columns: 1fr 1fr 2fr;
+        "intro info"
+        "intro contact"
+    ;
+    // grid-template-rows: 50px 1fr 30px;
+    grid-template-columns: 50% 50%;
 }
 .about-intro {
     grid-area: intro;
@@ -45,11 +46,13 @@
             img {
                 width: 250px;
                 height: 250px;
+                margin: 10px 0 10px 0;
                 object-fit: cover;
                 border-radius: 50%;
-                // animation-name: about-image;
+                animation-name: about-image;
                 animation-duration: 4s;
                 animation-iteration-count: infinite;
+                background-color: silver;
             }
         }
     }
@@ -68,6 +71,7 @@
         section {
             display: flex;
             align-items: center;
+            justify-content: space-between;
             font-size: 1em;
             margin-top: 10px;
             p {
@@ -89,6 +93,9 @@
     .about-contact-content-section {
         font-size: 1em;
         section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             margin-top: 10px;
         }
     }
@@ -117,9 +124,11 @@
     .about {
         width: 98.5%;
         grid-template-areas: 
-        "intro intro intro"
-        "info info info"
-        "contact contact contact";
+        "intro" 
+        "info" 
+        "contact"
+        ;
+        grid-template-columns: auto;
     }
     .about-intro-content-section {
         flex-direction: column;

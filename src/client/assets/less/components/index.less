@@ -1,0 +1,22 @@
+.index-background-image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.index-background-image {
+    width: var(--component-width);
+    height: 100vh;
+    border-radius: var(--component-border-radius);
+    background-image: url('../../img/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-origin: border-box;
+}
+
+@media only screen and (max-width: 800px) {
+    .index-background-image {
+        width: 99%;
+    }
+}

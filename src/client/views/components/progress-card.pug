@@ -1,8 +1,14 @@
-mixin progress-card
+mixin progress-card(progress, id, header, content, imgSrc, imgAlt)
     .tilting-card-content
-        img(src="./assets/img/img-1.jpg", alt="")
-        header Tilting card
-        p with css only!
+        .tilting-card-body
+            .card-image
+                img(src=imgSrc, alt=imgAlt)
+            .card-text
+                header #{ header }
+                p #{ content }
+            .card-progress
+                label(for=id) 
+                progress.progress(id=id, value=progress, max=100)
         .mouse-position-tracker
             div
             div

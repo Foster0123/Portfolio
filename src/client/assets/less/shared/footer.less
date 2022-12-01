@@ -16,7 +16,39 @@
     margin-top: 5px;
     width: var(--component-width);
 }
-
+.footer-social-media-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99.5%;
+    background-color: var(--dark-theme-component-background-color);
+    height: 40px;
+    i {
+        padding: 2.5px 5px 2.5px 5px;
+        font-size: 1.1em;
+        border-radius: 50%;
+        margin: 0px 5px 0 5px;
+    }
+    #twitter:hover {
+        color: #00acee;
+    }
+    #facebook:hover {
+        position: relative;
+        color: #3b5998;
+    }
+    #instagram {
+        &:hover {
+            font-size: 1.1em;
+            background: linear-gradient(90deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    #linkedin:hover {
+        color: #0A66C2;
+    }
+}
 .footer-end-section {
     align-items: center;
     background-color: var(--dark-theme-component-background-color);
@@ -42,23 +74,27 @@
 }
 
 .footer-title-section {
-    header {
-        color: var(--dark-theme-foreground-color);
-        font-family: @tangerine;
-        font-size: 2.5em;
-        letter-spacing: -2px;
-        margin-bottom: 10px;
-
-        i {
-            color: var(--dark-theme-logo-color);
-            font-size: 0.8em;
-            margin-right: 5px;
-        }
-
-        sup {
-            font-size: 20px;
+    .footer-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        header {
+            color: var(--dark-theme-foreground-color);
+            font-family: @tangerine;
+            font-size: 2.5em;
+            letter-spacing: -2px;
+            margin-bottom: 10px;
             i {
-                color: var(--dark-theme-foreground-color);
+                color: var(--dark-theme-logo-color);
+                font-size: 0.8em;
+                margin-right: 5px;
+            }
+    
+            sup {
+                font-size: 20px;
+                i {
+                    color: var(--dark-theme-foreground-color);
+                }
             }
         }
     }
@@ -192,7 +228,9 @@
     .footer-body-section {
         grid-template-columns: 1fr 2fr;
     }
-
+    .footer-social-media-section {
+        width: 98%;
+    }
     .footer-end-section {
         border-radius: 0 0 10px 10px;
         width: 98%;
