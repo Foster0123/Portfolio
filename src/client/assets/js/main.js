@@ -10,17 +10,16 @@ const OSThemeLight = window.matchMedia('(prefers-color-scheme:light').matches
 window.addEventListener('load', () => {
     if (theme === 'dark') {
         doc.classList.add('dark-theme')
-        themeBtn.className = "bi bi-moon";
+        themeBtn.className = 'bi bi-moon'
     } else {
-        doc.classList.remove('dark-theme');
-        themeBtn.className = "bi bi-sun";
+        doc.classList.remove('dark-theme')
+        themeBtn.className = 'bi bi-sun'
     }
-    if (theme==null){
-        if(OSThemeDark){
-            doc.classList.add("dark-theme");
-        }
-        else if(OSThemeLight){
-            doc.classList.remove("dark-theme");
+    if (theme == null) {
+        if (OSThemeDark) {
+            doc.classList.add('dark-theme')
+        } else if (OSThemeLight) {
+            doc.classList.remove('dark-theme')
         }
     }
 })
@@ -28,17 +27,15 @@ themeBtn.addEventListener('click', () => {
     if (doc.classList.contains('dark-theme')) {
         doc.classList.remove('dark-theme')
         localStorage.setItem('theme', 'light')
-    }
-    else {
+    } else {
         doc.classList.add('dark-theme')
         localStorage.setItem('theme', 'dark')
     }
 
-    if(themeBtn.className === "bi bi-moon") {
-        themeBtn.className = "bi bi-sun";
-    }
-    else {
-        themeBtn.className = "bi bi-moon";
+    if (themeBtn.className === 'bi bi-moon') {
+        themeBtn.className = 'bi bi-sun'
+    } else {
+        themeBtn.className = 'bi bi-moon'
     }
 })
 

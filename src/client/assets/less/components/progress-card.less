@@ -20,7 +20,7 @@
     .tilting-card-body {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-between;
 
         img {
             border-radius: 5px;
@@ -35,12 +35,40 @@
 
         p {
             font-family: @opensans;
+            font-size: 0.8em;
         }
-
-        progress {
-            margin: 0;
-            padding: 0;
-            width: 100%;
+        .card-progress {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            .progress {
+                margin: 0;
+                padding: 0;
+                width: 85%;
+                height: 10px;
+                appearance: none;
+                border-radius: 10px;
+                background: linear-gradient(90deg, pink, purple);
+                &::-webkit-progress-bar {
+                    border-radius: 10px;
+                    background: linear-gradient(90deg, pink, purple);
+                }
+                &::-webkit-progress-value {
+                    background-color: red;
+                    border-radius: 10px;
+                }
+                &::-moz-progress-bar {
+                    background-color: red;
+                    border-radius: 10px;
+                }
+            }
+            label {
+                margin-left: 3px;
+                width: 20%;
+                font-family: @redhatmono;
+                font-size: 1em;
+                color: yellowgreen;
+            }
         }
     }
 }
