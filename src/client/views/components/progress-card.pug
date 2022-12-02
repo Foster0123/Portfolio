@@ -1,5 +1,14 @@
 mixin progress-card(progress, id, header, content, imgSrc, imgAlt)
-    .tilting-card-content
+    .tilting-card-wrapper
+        .mouse-position-tracker
+        .mouse-position-tracker
+        .mouse-position-tracker
+        .mouse-position-tracker
+        .mouse-position-tracker
+        .mouse-position-tracker
+        .mouse-position-tracker
+        .mouse-position-tracker
+        .mouse-position-tracker
         .tilting-card-body
             .card-image
                 img(src=imgSrc, alt=imgAlt)
@@ -10,13 +19,3 @@ mixin progress-card(progress, id, header, content, imgSrc, imgAlt)
                 label(for=id)
                     | #{progress}%
                 progress.progress(id=id, value=progress, max=100)
-        .mouse-position-tracker
-            div
-            div
-            div
-            div
-            div
-            div
-            div
-            div
-            div
