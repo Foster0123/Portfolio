@@ -8,6 +8,11 @@
         padding: 10px;
         border-radius: 10px;
         width: calc(var(--component-width) - 1%);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 .resume-header-section {
@@ -20,9 +25,10 @@
         font-size: 0.9em;
         font-family: @opensans;
         font-weight: 500;
+        margin-bottom: 15px;
         i.resume-header-icon {
             font-size: 1.5em;
-            color: var( --resume-icon-color);
+            color: var(--yellowgreen-color);
             margin-right: 8px;
             animation-name: resume-icon-animate;
             animation-duration: 4s;
@@ -33,11 +39,12 @@
     }
 }
 .resume-content-section {
-    margin-left: 35px;
+
     font-family: @merriweather;
 }
 .resume-download-section {
-    margin: 10px 0 10px 35px;
+    // margin: 10px 0 10px 35px;
+    margin-top: 15px;
     button {
         color: inherit;
         font-size: 1.1em;
@@ -54,13 +61,13 @@
             width: inherit;
             text-decoration: none;
             color: inherit;
-            border: 1px solid yellowgreen;
+            border: 1px solid var(--yellowgreen-color);
             border-radius: inherit;
             transform: scale(1, 1);
             transition: background-color, color, 200ms ease-in-out;
             &:hover {
-                background-color: var(--resume-button-background);
-                box-shadow: 0 0 10px var(--resume-button-background);
+                background-color: var(--yellowgreen-color);
+                box-shadow: 0 0 10px var(--yellowgreen-color);
                 transform: scale(1.1, 1.1);
                 transition: background-color, transform, 200ms ease-in-out;
             }

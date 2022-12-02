@@ -6,7 +6,6 @@
 
 body {
     align-items: center;
-    background: var(--global-foreground);
     display: flex;
     flex-direction: column;
     font-family: @merriweather;
@@ -16,6 +15,8 @@ body {
 }
 
 html {
+    color: var(--global-foreground);
+    background-color: var(--global-background);
     height: 100vh;
     scroll-behavior: smooth;
 }
@@ -23,11 +24,6 @@ html {
 main {
     margin-top: 65px;
     width: 100%;
-}
-
-.light-theme {
-    background-color: var(--component-background) !important;
-    color: var(--component-foreground) !important;
 }
 @media only screen and (max-width: 800px) {
     main {

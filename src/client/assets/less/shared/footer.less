@@ -91,13 +91,16 @@
             letter-spacing: -2px;
             margin-bottom: 10px;
             i {
-                color: inherit;
+                color: var(--logo-color);
                 font-size: 0.8em;
                 margin-right: 5px;
             }
     
             sup {
                 font-size: 20px;
+                i {
+                    color: inherit;
+                }
             }
         }
     }
@@ -140,7 +143,7 @@
 }
 
 .footer-link-section {
-    border-right: 1px solid white;
+    border-right: 1px solid inherit;
     list-style-type: none;
     padding-right: 10px;
 
