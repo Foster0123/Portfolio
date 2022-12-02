@@ -1,6 +1,5 @@
 // <---------- Variables For Navbar Module ---------->
 
-
 // <---------- Styles For Navbar Module ---------->
 
 .navbar-container {
@@ -14,15 +13,14 @@
     align-items: center;
     background: var(--navbar-background);
     border-radius: 30px;
+    color: var(--component-foreground);
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
     position: fixed;
     top: 5px;
-    transition: background, var(--transition-duration) ease-in-out;
     width: var(--component-width);
     z-index: 10;
-    color: var(--component-foreground);
 }
 
 .navbar-header-section {
@@ -68,18 +66,18 @@
     flex-direction: row;
     list-style-type: none;
     margin-right: 60px;
-    opacity: 1;
     outline: none;
-    transition: opacity, var(--transition-duration) ease-in-out;
 
     .navbar-link {
         transform: translateY(0);
-        transition: transform, text-shadow, var(--transition-duration) ease-in-out;
+        transition: transform, text-shadow,
+            var(--transition-duration) ease-in-out;
 
         &:hover {
-            transform: translateY(5px);
             text-shadow: 0 0 10px var(--navlink-foreground);
-            transition: transform, text-shadow, var(--transition-duration) ease-in-out;
+            transform: translateY(5px);
+            transition: transform, text-shadow,
+                var(--transition-duration) ease-in-out;
         }
 
         .navbar-nested-link {
@@ -111,38 +109,43 @@
     transition: margin-right, var(--transition-duration) ease-in-out;
 
     .theme-btn {
-        border-radius: 50%;
-        font-size: 33px;
         background-color: var(--component-background);
-        padding: 2.5px 5px .5px 5px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 33px;
         margin-right: 5px;
+        padding: 2.5px 5px 0.5px;
         text-shadow: 0 0 0 var(--theme-button-text-shadow);
         transition: text-shadow var(--transition-duration) ease-in-out;
-        cursor: pointer;
+
         &:hover {
             text-shadow: 0 0 10px var(--theme-button-text-shadow);
             transition: text-shadow var(--transition-duration) ease-in-out;
         }
+
         i {
             color: inherit;
         }
     }
+
     .menu {
         background-color: var(--component-background);
         border-radius: 50%;
+        cursor: pointer;
         display: none;
         font-size: 33px;
         padding: 1px 5px;
-        cursor: pointer;
+
         i {
             color: inherit;
         }
     }
 }
+
 .animate-theme-button {
-    animation-name: animate-theme-button!important;
     animation-duration: 0.3s;
-    transition: animation-name, 200ms ease-in-out;
+    animation: animate-theme-button 2s 1;
+    transition: animation, var(--transition-duration) ease-in-out;
 }
 
 // <---------- Animations For Navbar Module ---------->
@@ -185,19 +188,21 @@
 
 @keyframes animate-theme-button {
     0% {
-        transform:scale(0);
+        transform: scale(0);
     }
+
     50% {
-        transform:scale(1.5);
+        transform: scale(1.5);
     }
+
     100% {
-        transform:scale(1.0);
+        transform: scale(1);
     }
 }
 
 // <---------- Media Queries For Navbar Module --------->
 
-@media only screen and (max-width: 800px) {
+@media only screen and(max-width: 800px) {
     .navbar {
         width: calc(var(--component-width) - 1%);
     }
@@ -213,7 +218,8 @@
         position: absolute;
         right: -200px;
         top: 60px;
-        transition: width, box-shadow, right, var(--transition-duration) ease-in-out;
+        transition: width, box-shadow, right,
+            var(--transition-duration) ease-in-out;
         width: var(--mobile-navlist-width);
 
         &:hover {
@@ -282,14 +288,17 @@
             }
         }
     }
+
+    .hide-navbar {
+        right: 2.5px !important;
+        transition: right, 200ms ease-in-out;
+    }
+
     .navbar-btn-container {
-      .menu {
-        display: inline-block;
-      }
+        .menu {
+            display: inline-block;
+        }
+
         transition: margin-right, var(--transition-duration) ease-in-out;
     }
-}
-.hide-navbar {
-    right: 2.5px;
-    transition: right, 200ms ease-in-out;
 }

@@ -19,6 +19,7 @@ const purgeCssOptions = {
     "dark-theme", 
     "light-theme",
     "display-navbar",
+    "hide-navbar",
     "animate-theme-button"
   ]
 }
@@ -27,6 +28,6 @@ export default {
   plugins: [
     // purgeCSSPlugin(purgeCssOptions),
     autoprefixer(),
-    cssnanoPlugin()
+    // cssnanoPlugin()
   ]
 }

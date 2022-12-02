@@ -1,79 +1,89 @@
 .resume-container {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
+
     .resume {
+        align-items: center;
         background-color: var(--component-background);
-        color: var(--component-foreground);
-        padding: 10px;
         border-radius: 10px;
-        width: calc(var(--component-width) - 1%);
-        height: 100vh;
+        color: var(--component-foreground);
         display: flex;
         flex-direction: column;
+        height: 100vh;
         justify-content: center;
-        align-items: center;
+        padding: 10px;
+        width: calc(var(--component-width) - 1%);
     }
 }
+
 .resume-header-section {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
+
     .resume-header {
-        display: inherit;
         align-items: center;
-        font-size: 0.9em;
+        display: inherit;
         font-family: @opensans;
+        font-size: 0.9em;
         font-weight: 500;
         margin-bottom: 15px;
+
         i.resume-header-icon {
-            font-size: 1.5em;
-            color: var(--yellowgreen-color);
-            margin-right: 8px;
-            animation-name: resume-icon-animate;
             animation-duration: 4s;
+            animation-name: resume-icon-animate;
+            color: var(--yellowgreen-color);
+            font-size: 1.5em;
+            margin-right: 8px;
         }
+
         p {
             font-size: 1.5em;
         }
     }
 }
-.resume-content-section {
 
+.resume-content-section {
     font-family: @merriweather;
 }
+
 .resume-download-section {
     // margin: 10px 0 10px 35px;
     margin-top: 15px;
+
     button {
-        color: inherit;
-        font-size: 1.1em;
         background: none;
-        border-radius: 10px;
         border: none;
-        outline: none;
+        border-radius: 10px;
+        color: inherit;
         font-family: @lato;
+        font-size: 1.1em;
         font-weight: 500;
+        outline: none;
+
         a {
-            display: inline-block;
-            padding: 5px 10px 5px 10px;
-            height: inherit;
-            width: inherit;
-            text-decoration: none;
-            color: inherit;
             border: 1px solid var(--yellowgreen-color);
             border-radius: inherit;
+            color: inherit;
+            display: inline-block;
+            height: inherit;
+            padding: 5px 10px;
+            text-decoration: none;
             transform: scale(1, 1);
             transition: background-color, color, 200ms ease-in-out;
+            width: inherit;
+
             &:hover {
                 background-color: var(--yellowgreen-color);
                 box-shadow: 0 0 10px var(--yellowgreen-color);
                 transform: scale(1.1, 1.1);
                 transition: background-color, transform, 200ms ease-in-out;
             }
+
             i {
-                margin-right: 5px;
                 color: #0c69c0;
+                margin-right: 5px;
                 position: relative;
                 top: 1px;
             }
@@ -85,6 +95,7 @@
     0% {
         transform: rotateY(0deg);
     }
+
     100% {
         transform: rotateY(360deg);
     }

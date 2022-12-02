@@ -1,133 +1,155 @@
 .about-container {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
+
 .about {
     color: var(--component-foreground);
-    width: 99%;
-    display: grid;
-    row-gap: 5px;
     column-gap: 5px;
-    grid-template-areas: 
-        "intro info"
-        "intro contact"
-    ;
+    display: grid;
+    grid-template-areas:
+        'intro info'
+        'intro contact';
     // grid-template-rows: 50px 1fr 30px;
     grid-template-columns: 50% 50%;
+    row-gap: 5px;
+    width: 99%;
 }
+
 .about-intro {
-    grid-area: intro;
     background-color: var(--component-background);
-    padding: 10px;
     border-radius: 5px 5px 10px 10px;
+    grid-area: intro;
+    padding: 10px;
+
     .about-intro-header-section {
         text-align: center;
+
         header {
+            font-family: @opensans;
             font-size: var(--about-section-titles-font-size);
-            font-family:@opensans;
         }
     }
+
     .about-intro-content-section {
         display: flex;
         flex-direction: column;
+
         .about-intro-content-text-section {
             font-family: @redhatmono;
-            letter-spacing:-0.5px;
+            letter-spacing: -0.5px;
             text-align: center;
         }
-        .about-intro-content-image-section{
-            font-family: @merriweather;
-            display: flex;
+
+        .about-intro-content-image-section {
             align-items: center;
+            display: flex;
+            font-family: @merriweather;
             justify-content: center;
+
             img {
-                width: 250px;
-                height: 250px;
-                margin: 10px 0 10px 0;
-                object-fit: cover;
-                border-radius: 50%;
-                animation-name: about-image;
                 animation-duration: 4s;
                 animation-iteration-count: infinite;
+                animation-name: about-image;
                 background-color: silver;
+                border-radius: 50%;
+                height: 250px;
+                margin: 10px 0;
+                object-fit: cover;
+                width: 250px;
             }
         }
     }
 }
+
 .about-info {
-    grid-area: info;
-    background-color:var(--component-background);
-    padding: 10px;
+    background-color: var(--component-background);
     border-radius: 10px;
+    grid-area: info;
+    padding: 10px;
     text-align: center;
+
     .about-info-header-section {
         font-family: @opensans;
         font-size: var(--about-section-titles-font-size);
     }
+
     .about-info-content-section {
         section {
-            display: flex;
             align-items: center;
-            justify-content: space-between;
+            display: flex;
             font-size: 1em;
+            justify-content: space-between;
             margin-top: 10px;
+
             p {
                 font-size: 1em;
             }
         }
     }
 }
+
 .about-contact {
-    grid-area: contact;
     background-color: var(--component-background);
-    padding: 10px;
     border-radius: 5px 5px 10px 10px;
+    grid-area: contact;
+    padding: 10px;
+
     .about-contact-header-section {
-        font-size: 1.5em;
         font-family: @opensans;
+        font-size: 1.5em;
         text-align: center;
     }
+
     .about-contact-content-section {
         font-size: 1em;
+
         section {
-            display: flex;
             align-items: center;
+            display: flex;
             justify-content: space-between;
             margin-top: 10px;
         }
     }
 }
+
 @keyframes about-image {
     0% {
         box-shadow: 0 0 10px pink;
     }
+
     20% {
         box-shadow: 0 0 15px orangered;
     }
+
     40% {
         box-shadow: 0 0 20px rebeccapurple;
     }
+
     60% {
         box-shadow: 0 0 20px yellowgreen;
     }
+
     80% {
         box-shadow: 0 0 15px yellow;
     }
+
     100% {
         box-shadow: 0 0 10px pink;
     }
 }
-@media only screen and (max-width:800px) {
+
+@media only screen and (max-width: 800px) {
     .about {
-        width: 98.5%;
-        grid-template-areas: 
-        "intro" 
-        "info" 
-        "contact"
-        ;
+        grid-template-areas:
+            'intro'
+            'info'
+            'contact';
         grid-template-columns: auto;
+        width: 98.5%;
     }
+
     .about-intro-content-section {
         flex-direction: column;
         transition: flex-direction, 200ms ease-in-out;

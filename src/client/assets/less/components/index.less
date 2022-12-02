@@ -1,20 +1,21 @@
 .index-background-image-section {
-    display: flex;
-    justify-content: center;
     align-items: center;
     color: var(--component-foreground);
+    display: flex;
+    justify-content: center;
 }
+
 .index-background-image {
-    width: var(--component-width);
-    height: 100vh;
-    border-radius: var(--component-border-radius);
-    background-image: url('../../img/background.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     background-attachment: scroll;
-    background-origin: border-box;
     background-color: var(--component-background);
+    background-image: url('../../img/background.png');
+    background-origin: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: var(--component-border-radius);
+    height: 100vh;
+    width: var(--component-width);
 }
 
 @media only screen and (max-width: 800px) {

@@ -1,12 +1,25 @@
+import { resolve } from 'path';
 import { defineConfig } from 'vite'
 import vitePugPlugin from 'vite-plugin-pug-transformer'
 import viteImagemin from 'vite-plugin-imagemin'
 
 export default defineConfig({
-    root: 'src/client',
-    publicDir: 'public',
+    base: "./",
+    root: './src/client',
+    publicDir: './public',
     build:{
-        outDir:"../../build",
+        ssr:true,
+        outDir:"./build",
+        sourcemap:true,
+        rollupOptions: {
+            input: {
+                index: resolve(__dirname, "./src/client/index.html/"),
+                about: resolve(__dirname, "./src/client/about.html/"),
+                progress: resolve(__dirname, "./src/client/progress.html/"),
+                resume: resolve(__dirname, "./src/client/resume.html/"),
+                services: resolve(__dirname, "./src/client/services.html/")
+            }
+        }
     },
     plugins: [
         vitePugPlugin(),

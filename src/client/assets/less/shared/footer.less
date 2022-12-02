@@ -9,55 +9,70 @@
 .footer {
     background-color: var(--navbar-background);
     border-radius: 5px 5px 0 0;
+    color: var(--component-foreground);
     display: grid;
     gap: 10px;
     grid-template-columns: 1fr 2fr;
-    padding: 10px;
     margin-top: 5px;
+    padding: 10px;
     width: var(--component-width);
-    color: var(--component-foreground);
 }
+
 .footer-social-media-section {
-    display: flex;
     align-items: center;
+    background-color: var(--navbar-background);
+    color: inherit;
+    display: flex;
+    height: 40px;
     justify-content: center;
     width: 99.5%;
-    background-color: var(--navbar-background);
-    height: 40px;
-    color: inherit;
+
     a {
         color: var(--component-foreground);
     }
+
     i {
-        padding: 2.5px 5px 2.5px 5px;
-        font-size: 1.1em;
         border-radius: 50%;
-        margin: 0px 5px 0 5px;
+        font-size: 1.1em;
+        margin: 0 5px;
+        padding: 2.5px 5px;
     }
+
     #twitter:hover {
         color: #00acee;
     }
+
     #facebook:hover {
-        position: relative;
         color: #3b5998;
+        position: relative;
     }
+
     #instagram {
         &:hover {
-            font-size: 1.1em;
-            background: linear-gradient(90deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            background: linear-gradient(
+                90deg,
+                #f09433 0%,
+                #e6683c 25%,
+                #dc2743 50%,
+                #cc2366 75%,
+                #bc1888 100%
+            );
             background-clip: text;
-            -webkit-background-clip: text;
+            font-size: 1.1em;
             -webkit-text-fill-color: transparent;
         }
     }
+
     #linkedin:hover {
-        color: #0A66C2;
+        color: #0a66c2;
     }
 }
+
 .footer-end-section {
     align-items: center;
     background-color: var(--navbar-background);
     border-radius: 0 0 5px 5px;
+    color: var(--component-foreground);
     display: flex;
     flex-direction: column;
     font-family: @montserrat-alternates;
@@ -68,7 +83,7 @@
     padding-left: 10px;
     text-align: center;
     width: var(--component-width);
-    color: var(--component-foreground);
+
     header {
         margin-right: 5px;
     }
@@ -80,24 +95,27 @@
 
 .footer-title-section {
     color: inherit;
+
     .footer-title {
-        display: flex;
         align-items: center;
+        display: flex;
         justify-content: space-between;
-        
+
         header {
             font-family: @tangerine;
             font-size: 2.5em;
             letter-spacing: -2px;
             margin-bottom: 10px;
+
             i {
                 color: var(--logo-color);
                 font-size: 0.8em;
                 margin-right: 5px;
             }
-    
+
             sup {
                 font-size: 20px;
+
                 i {
                     color: inherit;
                 }
@@ -153,6 +171,7 @@
         border-radius: 10px;
         display: flex;
         padding: 10px;
+
         i {
             font-size: 1em;
             margin-right: 5px;
@@ -174,7 +193,9 @@
 
             &:hover {
                 color: var(--footer-link-text-shadow-color);
-                filter: drop-shadow(0 0px 20px var(--footer-link-text-shadow-color));
+                filter: drop-shadow(
+                    0 0 20px var(--footer-link-text-shadow-color)
+                );
                 text-shadow: 0 0 20px var(--footer-link-text-shadow-color);
                 transition: color, text-shadow, filter 200ms ease-in-out;
             }
@@ -182,10 +203,12 @@
             i {
                 margin-right: 10px;
             }
+
             #fiddle {
-                position: relative;
                 left: -1.5px;
+                position: relative;
             }
+
             .external {
                 position: relative;
             }
@@ -219,9 +242,11 @@
     .footer-body-section {
         grid-template-columns: 1fr 2fr;
     }
+
     .footer-social-media-section {
         width: 98%;
     }
+
     .footer-end-section {
         border-radius: 0 0 10px 10px;
         width: 98%;

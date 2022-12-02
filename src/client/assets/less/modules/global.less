@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    // transition: color, background-color, var(--transition-duration) ease-in-out;
 }
 
 body {
@@ -15,8 +16,8 @@ body {
 }
 
 html {
-    color: var(--global-foreground);
     background-color: var(--global-background);
+    color: var(--global-foreground);
     height: 100vh;
     scroll-behavior: smooth;
 }
@@ -25,6 +26,15 @@ main {
     margin-top: 65px;
     width: 100%;
 }
+
+.dark-theme {
+    --component-foreground: #fbfaf5 !important;
+    --component-background: #181818 !important;
+    --global-foreground: #f8f8f8ec !important;
+    --global-background: #000000ec !important;
+    --navbar-background: #1f1d1d !important;
+}
+
 @media only screen and (max-width: 800px) {
     main {
         width: var(--component-width);
