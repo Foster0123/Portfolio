@@ -13,8 +13,8 @@ mixin progress-card(progress, id, header, content, imgSrc, imgAlt)
             .card-image
                 img(src=imgSrc, alt=imgAlt)
             .card-text
-                header #{ header }
-                p #{ content }
+                h2 #{ header }
+                h5 #{ content }
             .card-progress
                 label(for=id)
                     | #{ progress }%

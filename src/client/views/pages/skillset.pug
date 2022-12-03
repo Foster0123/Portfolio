@@ -1,0 +1,54 @@
+extends ../templates/base.pug
+block meta
+    meta(charset='UTF-8')
+    meta(
+        name='keywords',
+        content='portfolio Portfolio Portfolio Skillsets skills SKills skillsets skillset'
+    )
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='author', content='Foss')
+    meta(name='robots', content='index,nofollow')
+    meta(
+        name='description',
+        content='stylo portfolio website skillset page describing skills as well as progression nicely through pleasing user interface containing web skills like web frameworks front end and back end full stack as well'
+    )
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+block title
+    | Skillset
+block content
+    .card-container
+        h1 MY SKILLSETS
+        .cards
+            include ../components/progress-card.pug
+            +progress-card(32, "progress-1", "ReactJS", "Front End Framework", "./assets/img/reactjs.png", "ReactJS Logo")
+            +progress-card(41, "progress-2", "VueJS", "Front-End Framework", "./assets/img/vuejs.png", "VueJS Logo")
+            +progress-card(32, "progress-3", "Angular", "Front-End Framework", "./assets/img/angular.png", "Angular Logo")
+            +progress-card(30, "progress-4", "Svelte", "Front-End Framework", "./assets/img/svelte.png", "Svelte Logo")
+            +progress-card(40, "progress-5", "Astro", "Front-End Framework", "./assets/img/astro.png", "Astro Logo")
+            +progress-card(40, "progress-6", "Ember", "Front-End Framework", "./assets/img/ember.png", "Ember Logo")
+            +progress-card(70, "progress-25", "NextJS", "Front-End Framework", "./assets/img/nextjs.png", "NextJS Logo")
+            +progress-card(50, "progress-7", "Vaadin Flow", "Front-End Framework", "./assets/img/flow.png", "Vaadin Flow Logo")
+            +progress-card(80, "progress-31", "Lit Element", "Front-End Framework", "./assets/img/lit.png", "Lit Element Logo")
+
+            +progress-card(90, "progress-8", "Bootstrap", "Style-End Framework", "./assets/img/bootstrap.png", "BootStrap Logo")
+            +progress-card(70, "progress-9", "TailWind", "Style-End Framework", "./assets/img/tailwindcss.png", "TailWind Logo")
+            +progress-card(60, "progress-10", "Foundation", "Style-End Framework", "./assets/img/foundation.png", "Foundation Logo")
+
+            +progress-card(47, "progress-11", "NestJS", "Back-End Framework", "./assets/img/nestjs.png", "NestJS Logo")
+            +progress-card(48, "progress-12", "AdonisJS", "Back-End Framework", "./assets/img/adonisjs.png", "AdonisJS Logo")
+            +progress-card(65, "progress-13", "Flask", "Back-End Framework", "./assets/img/flask.png", "Flask Logo")
+            +progress-card(77, "progress-14", "NodeJS", "Back-End JS Runtime", "./assets/img/nodejs.png", "NodeJS Logo")
+
+            +progress-card(45, "progress-15", "Fresh", "Full-Stack Framework", "./assets/img/Fresh.png", "Fresh Logo")
+            +progress-card(60, "progress-16", "Laravel", "Full-Stack Framework", "./assets/img/laravel.png", "Laravel Logo")
+            +progress-card(55, "progress-17", "Actix Web", "Full-Stack Framework", "./assets/img/actixweb.png", "Actix Web Logo")
+            +progress-card(43, "progress-26", "Gin", "Full-Stack Framework", "./assets/img/gin.png", "Gin Logo")
+            +progress-card(38, "progress-18", "Remix", "Full-Stack Framework", "./assets/img/remix.png", "Remix Logo")
+            +progress-card(60, "progress-18", "Django", "Full-Stack Framework", "./assets/img/django.png", "Django Logo")
+            +progress-card(58, "progress-19", "Ruby On Rails", "Full-Stack Framework", "./assets/img/rubyonrails.png", "Ruby On Rails Logo")
+            +progress-card(30, "progress-24", "Phoenix", "Full-Stack Framework", "./assets/img/phoenix.png", "Phoenix Logo")
+
+            +progress-card(77, "progress-20", "PostgreSQL", "SQL Database", "./assets/img/postgresql.png", "PostgreSQL Logo")
+            +progress-card(75, "progress-21", "MySQL", "SQL Database", "./assets/img/mysql.png", "MySQL Logo")
+            +progress-card(69, "progress-22", "MongoDB", "NoSQL Database", "./assets/img/mongo.png", "MongoDB Logo")
+            +progress-card(59, "progress-23", "Redis", "NoSQL Database", "./assets/img/redis.png", "Redis Logo")

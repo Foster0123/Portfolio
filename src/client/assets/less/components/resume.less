@@ -4,13 +4,11 @@
     justify-content: center;
 
     .resume {
-        align-items: center;
         background-color: var(--component-background);
         border-radius: 10px;
         color: var(--component-foreground);
         display: flex;
         flex-direction: column;
-        height: 100vh;
         justify-content: center;
         padding: 10px;
         width: calc(var(--component-width) - 1%);
@@ -20,24 +18,14 @@
 .resume-header-section {
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     .resume-header {
         align-items: center;
         display: inherit;
         font-family: @opensans;
-        font-size: 0.9em;
+        font-size: 1em;
         font-weight: 500;
-        margin-bottom: 15px;
-
-        i.resume-header-icon {
-            animation-duration: 4s;
-            animation-name: resume-icon-animate;
-            color: var(--yellowgreen-color);
-            font-size: 1.5em;
-            margin-right: 8px;
-        }
-
         p {
             font-size: 1.5em;
         }
@@ -45,11 +33,60 @@
 }
 
 .resume-content-section {
-    font-family: @merriweather;
+    padding: 10px;
+    background-color: bisque;
+    font-family: @lato;
+    display: grid;
+    grid-template-areas: 
+    "intro intro"
+    "info profile"
+    "info experience"
+    "skills experience"
+    "skills experience"
+    "languages experience"
+    "education experience"
+    ;
+    .resume-intro {
+        grid-area: intro;
+        font-size: 1.25em;
+    }
+    .resume-profile {
+        grid-area: profile;
+        font-size: 1.25em;
+    }
+    .resume-experience {
+        grid-area: experience;
+        font-size: 1.25em;
+    }
+    .resume-info {
+        grid-area: info;
+        font-size: 1.25em;
+        ul {
+            list-style-type: none;
+            li {
+                display: flex;
+                align-items: center;
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    .resume-skills {
+        grid-area: skills;
+        font-size: 1.25em;
+    }
+    .resume-languages {
+        grid-area: languages;
+        font-size: 1.25em;
+    }
+    .resume-education {
+        grid-area: education;
+        font-size: 1.25em;
+    }
 }
 
 .resume-download-section {
-    // margin: 10px 0 10px 35px;
     margin-top: 15px;
 
     button {
@@ -91,12 +128,16 @@
     }
 }
 
-@keyframes resume-icon-animate {
-    0% {
-        transform: rotateY(0deg);
-    }
-
-    100% {
-        transform: rotateY(360deg);
+@media only screen and (max-width: 800px) {
+    .resume-content-section {
+        grid-template-areas: 
+        "intro"
+        "info"
+        "skills"
+        "languages"
+        "education"
+        "profile"
+        "experience"
+        ;
     }
 }
