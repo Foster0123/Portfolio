@@ -48,25 +48,25 @@
                 height: 10px;
                 appearance: none;
                 border-radius: 10px;
-                background: linear-gradient(90deg, pink, purple);
+                background: var(--progressbar-inner-color);
                 &::-webkit-progress-bar {
                     border-radius: 10px;
-                    background: linear-gradient(90deg, pink, purple);
+                    background:var(--progressbar-inner-color);
                 }
                 &::-webkit-progress-value {
-                    background-color: red;
+                    background-color: var(--progressbar-outer-color);
                     border-radius: 10px;
                 }
                 &::-moz-progress-bar {
-                    background-color: red;
+                    background-color: var(--progressbar-outer-color);
                     border-radius: 10px;
                 }
             }
             label {
                 width: auto;
                 margin-left: 5px;
-                font-family: @redhatmono;
                 font-size: 1em;
+                font-family: @redhatmono;
                 color: yellowgreen;
             }
         }
