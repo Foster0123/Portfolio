@@ -1,16 +1,42 @@
 .service {
+    user-select: none;
     background-color: var(--component-background);
     border-radius: 10px;
     padding: 10px;
-    
+    position: relative;
     transition: box-shadow var(--transition-duration) ease-in-out;
     &:hover {
         box-shadow: 0 0 5px var(--component-foreground);
         transition: box-shadow var(--transition-duration) ease-in-out;
     }
-    header {
-        font-size: 1.3em;
-        font-family: @opensans;
+    #award {
+        font-size: 1.5em;
+        color: white;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        background: var(--service-card-award-icon-color);
+        font-size: 1.5em;
+        font-weight: 600;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .service-section-header {
+        display: flex;
+        align-items: center;
+        i {
+            margin-right: 5px;
+            background: var(--service-header-icon-color);
+            font-size: 1.1em;
+            font-weight: 600;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+        }
+        header {
+            font-size: 1.3em;
+            font-family: @opensans;
+        }
     }
     ul {
         height: 100%;
@@ -20,10 +46,13 @@
         justify-content: space-around;
         li {
             text-align: center;
-            margin-top: 5px;
+            margin: 5px 0 5px 0;
             display: flex;
-            align-items: flex-start;
+            font-weight: 900;
+            align-items:flex-start;
+            font-family: @montserrat-alternates;
             i {
+                margin-top: 2px;
                 margin-left: 5px;
                 color: gold;
             }
@@ -34,10 +63,14 @@
     grid-area: web;
     ul {
         li {
-            text-align: left!important;
+            text-align: left !important;
+            margin-left: 10px;
             i {
-                color: green;
+                background: var(--service-rocket-icon-color);
+                font-size: 0.9em;
                 margin-right: 10px;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
     }
@@ -58,7 +91,13 @@
     justify-content: center;
     align-items: center;
 }
-
+.cs-gradient {
+    background: var(--service-cs-gradient-color);
+    font-size: 1.1em;
+    font-weight: 600;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 @media only screen and (max-width: 800px) {
     .service {
         box-shadow: 0 0 5px var(--component-foreground);

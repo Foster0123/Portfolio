@@ -20,6 +20,7 @@
         "@babel/preset-env": "^7.20.2",
         "@fullhuman/postcss-purgecss": "^5.0.0",
         "@prettier/plugin-pug": "^2.3.0",
+        "@vitejs/plugin-basic-ssl": "^0.1.2",
         "autoprefixer": "^10.4.13",
         "cssnano": "^5.1.14",
         "eslint": "^8.28.0",

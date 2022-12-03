@@ -2,6 +2,6 @@
 .vscode
 yarn.lock
 .env
-/build
+/src/client/build
 /dist
 .log

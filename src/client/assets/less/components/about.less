@@ -1,7 +1,9 @@
 .about-container {
+    --about-section-text-font-weight: 900;
     align-items: center;
     display: flex;
     justify-content: center;
+    
 }
 
 .about {
@@ -39,6 +41,9 @@
             font-family: @montserrat-alternates;
             letter-spacing: -0.5px;
             text-align: center;
+            background: linear-gradient(45deg, orangered, pink);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .about-intro-content-image-section {
@@ -75,16 +80,19 @@
     }
 
     .about-info-content-section {
-        font-weight: var(--about-section-text-font-weight);
+        background: linear-gradient(45deg, gold, red);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
         section {
             align-items: center;
             display: flex;
             font-size: 1em;
             justify-content: space-between;
             margin-top: 10px;
-
             p {
                 font-size: 1em;
+                font-weight: var(--about-section-text-font-weight);
             }
         }
     }
@@ -96,7 +104,6 @@
     grid-area: contact;
     padding: 10px;
     font-family: @montserrat-alternates;
-    font-weight: var(--about-section-text-font-weight);
     .about-contact-header-section {
         font-family: @opensans;
         font-size: 1.5em;
@@ -104,7 +111,11 @@
     }
 
     .about-contact-content-section {
+        font-weight: var(--about-section-text-font-weight);
         font-size: 1em;
+        background: linear-gradient(45deg, cyan, green);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
 
         section {
             align-items: center;

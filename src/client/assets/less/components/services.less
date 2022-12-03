@@ -7,10 +7,9 @@
 .services {
     display: grid;
     height: 100vh;
-    grid-template-areas: 
-    "web mobile"
-    "web desktop"
-    ;
+    grid-template-areas:
+        'web mobile'
+        'web desktop';
     grid-template-columns: repeat(2, 1fr);
     width: var(--component-width);
     grid-gap: 5px;
@@ -21,11 +20,10 @@
 @media only screen and (max-width: 800px) {
     .services {
         width: 98%;
-        grid-template-areas: 
-        "web" 
-        "mobile" 
-        "desktop"
-        ;
+        grid-template-areas:
+            'web'
+            'mobile'
+            'desktop';
         grid-template-columns: repeat(1, 1fr);
         row-gap: 10px;
         column-gap: 10px;

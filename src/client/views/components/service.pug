@@ -1,14 +1,17 @@
-mixin service-card(className, header, list)
-    .service(class="service-section-"+className)
-            .service-section-header
-                header=header
-            .service-section-content
-                ul
-                    each value in list
-                        li
-                            i.bi.bi-asterisk
-                            |#{value}
-                    else
-                        li 
-                            | Coming Soon
-                            i.bi.bi-rocket-takeoff-fill
+mixin service-card(className, header, list, starred)
+    .service(class='service-section-' + className)
+        - if (starred)
+            i.bi.bi-award-fill#award
+        .service-section-header
+            i.bi.bi-patch-check-fill
+            header= header
+        .service-section-content
+            ul
+                each value in list
+                    li
+                        i.bi.bi-asterisk
+                        p #{ value }
+                else
+                    li 
+                        p.cs-gradient Coming Soon
+                        i.bi.bi-rocket-takeoff-fill

@@ -1,34 +1,23 @@
 extends ../templates/base.pug
-
+block meta
+    meta(charset="UTF-8")
+    meta(name="keywords", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="Stylo Portfolio Resume Page")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
 block title
     | Resume
 block content
     .resume-container
         .resume
             section.resume-header-section 
-                |
-                |
-                |
-                |
-                |
-                |
-                |
-                |
                 header.resume-header
                     i.bi.bi-file-earmark-person-fill.resume-header-icon
                     p.resume-header-title CV Resume
             section.resume-content-section
-                p.resume-content-text
-                | Resume Can Be Downloaded Here
+                p.resume-content-text Resume Can Be Downloaded Here
             section.resume-download-section 
-                |
-                |
-                |
-                |
-                |
-                |
-                |
-                |
+
                 button.resume-download-button
                     a(
                         href='./../../assets/docs/Developer-Resume.pdf',

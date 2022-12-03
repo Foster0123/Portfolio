@@ -2,13 +2,12 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite'
 import vitePugPlugin from 'vite-plugin-pug-transformer'
 import viteImagemin from 'vite-plugin-imagemin'
-
+import basicSsl from '@vitejs/plugin-basic-ssl'
 export default defineConfig({
     base: "./",
     root: './src/client',
     publicDir: './public',
     build:{
-        ssr:true,
         outDir:"./build",
         sourcemap:true,
         rollupOptions: {
@@ -22,6 +21,7 @@ export default defineConfig({
         }
     },
     plugins: [
+        basicSsl(),
         vitePugPlugin(),
         viteImagemin({
             gifsicle: {
