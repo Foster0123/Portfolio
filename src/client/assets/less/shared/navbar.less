@@ -24,13 +24,12 @@
 }
 
 .navbar-header-section {
-    align-items: center;
+    align-items: flex-end;
     cursor: pointer;
     display: flex;
     font-family: @tangerine;
     font-size: 2em;
     font-weight: bolder;
-    justify-content: space-between;
     margin-left: 10px;
     margin-right: 10px;
     outline: none;
@@ -43,20 +42,10 @@
         text-shadow: 0 0 20px var(--title-color);
         transition: text-shadow var(--transition-duration) ease-in-out;
     }
-
-    i::before {
-        border-radius: 50%;
-        color: var(--dark-theme-logo-color);
-        font-size: 1em;
-        margin-right: 5px;
-        position: relative;
-        top: 2px;
-    }
-
-    #icon {
-        height: 40px;
-        object-fit: cover;
+    img {
+        margin-right: 2.5px;
         width: 40px;
+        height: 40px;
     }
 }
 

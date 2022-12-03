@@ -1,0 +1,14 @@
+mixin service-card(className, header, list)
+    .service(class="service-section-"+className)
+            .service-section-header
+                header=header
+            .service-section-content
+                ul
+                    each value in list
+                        li
+                            i.bi.bi-asterisk
+                            |#{value}
+                    else
+                        li 
+                            | Coming Soon
+                            i.bi.bi-rocket-takeoff-fill

@@ -1,3 +1,33 @@
 .services-container {
     color: var(--component-foreground);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.services {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    "web mobile"
+    "web desktop"
+    ;
+    grid-template-columns: repeat(2, 1fr);
+    width: var(--component-width);
+    grid-gap: 5px;
+    column-gap: 5px;
+    width: 99%;
+    margin: 5px 0 5px 0;
+}
+@media only screen and (max-width: 800px) {
+    .services {
+        width: 98%;
+        grid-template-areas: 
+        "web" 
+        "mobile" 
+        "desktop"
+        ;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 10px;
+        column-gap: 10px;
+    }
 }

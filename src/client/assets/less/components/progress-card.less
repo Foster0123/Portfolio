@@ -19,7 +19,7 @@
         background-size: cover;
         background-position: center;
         transform: perspective(var(--perspective)) rotateX(var(--rotate-x))
-          rotateY(var(--rotate-y)) rotateZ(var(--rotate-z));
+            rotateY(var(--rotate-y)) rotateZ(var(--rotate-z));
         transition: transform 500ms ease;
         img {
             border-radius: 5px;
@@ -48,10 +48,11 @@
                 height: 10px;
                 appearance: none;
                 border-radius: 10px;
+                border: none;
                 background: var(--progressbar-inner-color);
                 &::-webkit-progress-bar {
                     border-radius: 10px;
-                    background:var(--progressbar-inner-color);
+                    background: var(--progressbar-inner-color);
                 }
                 &::-webkit-progress-value {
                     background-color: var(--progressbar-outer-color);
@@ -60,6 +61,7 @@
                 &::-moz-progress-bar {
                     background-color: var(--progressbar-outer-color);
                     border-radius: 10px;
+                    border: none;
                 }
             }
             label {
@@ -70,69 +72,69 @@
                 color: yellowgreen;
             }
         }
-      }
+    }
 }
-  .mouse-position-tracker {
+.mouse-position-tracker {
     position: absolute;
     width: calc(100% / 3);
     height: calc(100% / 3);
     z-index: 2;
-  }
-  /* 1st, 4th, 7th */
-  .mouse-position-tracker:nth-child(3n - 2) {
+}
+/* 1st, 4th, 7th */
+.mouse-position-tracker:nth-child(3n - 2) {
     left: 0;
-  }
-  /* 2nd, 5th, 8th */
-  .mouse-position-tracker:nth-child(3n - 1) {
+}
+/* 2nd, 5th, 8th */
+.mouse-position-tracker:nth-child(3n - 1) {
     left: calc(100% / 3);
-  }
-  
-  /* 2nd, 5th, 8th */
-  .mouse-position-tracker:nth-child(3n) {
+}
+
+/* 2nd, 5th, 8th */
+.mouse-position-tracker:nth-child(3n) {
     right: 0;
-  }
-  
-  /* 4 to 6 */
-  .mouse-position-tracker:nth-child(n + 4):nth-child(-n + 6) {
+}
+
+/* 4 to 6 */
+.mouse-position-tracker:nth-child(n + 4):nth-child(-n + 6) {
     top: calc(100% / 3);
-  }
-  /* 7 to 9 */
-  .mouse-position-tracker:nth-child(n + 7):nth-child(-n + 9) {
+}
+/* 7 to 9 */
+.mouse-position-tracker:nth-child(n + 7):nth-child(-n + 9) {
     bottom: 0;
-  }
-  
-  .mouse-position-tracker:nth-child(1):hover ~ .tilting-card-body {
+}
+
+.mouse-position-tracker:nth-child(1):hover ~ .tilting-card-body {
     --rotate-x: var(--angle);
     --rotate-y: calc(var(--angle) * -1);
-  }
-  
-  .mouse-position-tracker:nth-child(2):hover ~ .tilting-card-body {
+}
+
+.mouse-position-tracker:nth-child(2):hover ~ .tilting-card-body {
     --rotate-x: var(--angle);
-  }
-  
-  .mouse-position-tracker:nth-child(3):hover ~ .tilting-card-body {
+}
+
+.mouse-position-tracker:nth-child(3):hover ~ .tilting-card-body {
     --rotate-x: var(--angle);
     --rotate-y: var(--angle);
-  }
-  
-  .mouse-position-tracker:nth-child(4):hover ~ .tilting-card-body {
+}
+
+.mouse-position-tracker:nth-child(4):hover ~ .tilting-card-body {
     --rotate-y: calc(var(--angle) * -1);
-  }
-  
-  .mouse-position-tracker:nth-child(6):hover ~ .tilting-card-body {
+}
+
+.mouse-position-tracker:nth-child(6):hover ~ .tilting-card-body {
     --rotate-y: var(--angle);
-  }
-  
-  .mouse-position-tracker:nth-child(7):hover ~ .tilting-card-body {
+}
+
+.mouse-position-tracker:nth-child(7):hover ~ .tilting-card-body {
     --rotate-y: calc(var(--angle) * -1);
     --rotate-x: calc(var(--angle) * -1);
-  }
-  
-  .mouse-position-tracker:nth-child(8):hover ~ .tilting-card-body {
+}
+
+.mouse-position-tracker:nth-child(8):hover ~ .tilting-card-body {
     --rotate-x: calc(var(--angle) * -1);
-  }
-  
-  .mouse-position-tracker:nth-child(9):hover ~ .tilting-card-body {
+}
+
+.mouse-position-tracker:nth-child(9):hover ~ .tilting-card-body {
     --rotate-y: var(--angle);
     --rotate-x: calc(var(--angle) * -1);
-  }
+}

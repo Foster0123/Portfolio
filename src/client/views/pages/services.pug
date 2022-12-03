@@ -1,9 +1,13 @@
 extends ../templates/base.pug
 
 block title
-    |
     | Services
 block content
+    - var webservices = [ "Modern Website Design", "API Design", "Asthetic Front End Web Application", "Secure Back End Development", "Custom Website Design Of Any Scale", "Website Using Modern Frameworks Like React, Angular, Vue & More"]
     .services-container
         .services
-            h1 Services Offered
+            include ../components/service.pug
+            +service-card("1", "Web Development", webservices)
+            +service-card("2", "Mobile Development", [])
+            +service-card("3", "Desktop Development", [])
+            

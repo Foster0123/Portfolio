@@ -17,5 +17,5 @@ mixin progress-card(progress, id, header, content, imgSrc, imgAlt)
                 p #{ content }
             .card-progress
                 label(for=id)
-                    | #{progress}%
+                    | #{ progress }%
                 progress.progress(id=id, value=progress, max=100)
