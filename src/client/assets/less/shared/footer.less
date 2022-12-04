@@ -8,16 +8,30 @@
 
 .footer {
     background-color: var(--navbar-background);
-    border-radius: 5px 5px 0 0;
+    border-radius:5px 5px 0 0;
     color: var(--component-foreground);
     display: grid;
     gap: 10px;
     grid-template-columns: 1fr 2fr;
     margin-top: 5px;
     padding: 10px;
+    height: auto;
     width: var(--component-width);
+    backdrop-filter: blur(10px);
 }
-
+.footer::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius:5px 5px 0 0;
+    // background-color: var(--navbar-background);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
 .footer-social-media-section {
     align-items: center;
     background-color: var(--navbar-background);

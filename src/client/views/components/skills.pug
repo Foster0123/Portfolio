@@ -1,4 +1,4 @@
-mixin progress-card(progress, id, header, content, imgSrc, imgAlt)
+mixin skill(progress, id, header, content, languages, imgSrc, imgAlt)
     .tilting-card-wrapper
         .mouse-position-tracker
         .mouse-position-tracker
@@ -14,7 +14,8 @@ mixin progress-card(progress, id, header, content, imgSrc, imgAlt)
                 img(src=imgSrc, alt=imgAlt)
             .card-text
                 h2 #{ header }
-                h5 #{ content }
+                h4 #{ content }
+                h5 #{ languages }
             .card-progress
                 label(for=id)
                     | #{ progress }%

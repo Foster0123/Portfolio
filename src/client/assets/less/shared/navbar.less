@@ -11,7 +11,7 @@
 
 .navbar {
     align-items: center;
-    background: var(--navbar-background);
+    // background: var(--navbar-background);
     border-radius: 30px;
     color: var(--component-foreground);
     display: flex;
@@ -21,10 +21,13 @@
     top: 5px;
     width: var(--component-width);
     z-index: 10;
+    backdrop-filter: blur(5px);
 }
 
 .navbar-header-section {
-    align-items: flex-end;
+    position: relative;
+    top: 2px;
+    align-items: flex-start;
     cursor: pointer;
     display: flex;
     font-family: @tangerine;
@@ -72,7 +75,7 @@
         .navbar-nested-link {
             background: none;
             border-radius: 10px;
-            color: var(--yellowgreen-color);
+            color: var(--navlink-foreground);
             margin: 0 2.5px;
             outline: none;
             padding: 10px;
@@ -93,8 +96,8 @@
     justify-content: space-around;
     list-style-type: none;
     position: absolute;
-    right: 10px;
-    top: 8px;
+    right: 12px;
+    top: 10px;
     transition: margin-right, var(--transition-duration) ease-in-out;
 
     .theme-btn {
@@ -194,10 +197,12 @@
     .navbar {
         width: calc(var(--component-width) - 1%);
     }
-
+    .navbar-header-section {
+        top: 0;
+    }
     .navbar-link-section {
         align-items: center;
-        background: var(--navbar-background);
+        background-color: var(--navbar-background);
         border-radius: 20px;
         flex-direction: column;
         height: auto;
@@ -283,6 +288,7 @@
     }
 
     .navbar-btn-container {
+        top: 9px;
         .menu {
             display: inline-block;
         }
