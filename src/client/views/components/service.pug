@@ -1,7 +1,7 @@
 mixin service-card(className, header, list, starred)
     .service(class='service-section-' + className)
-        - if (starred)
-            i.bi.bi-award-fill#award
+        - if(starred)
+            i#award.bi.bi-award-fill
         .service-section-header
             i.bi.bi-patch-check-fill
             header= header
@@ -13,5 +13,7 @@ mixin service-card(className, header, list, starred)
                         p #{ value }
                 else
                     li 
+                        |
+                        |
                         p.cs-gradient Coming Soon
                         i.bi.bi-rocket-takeoff-fill

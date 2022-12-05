@@ -3,51 +3,52 @@ block meta
     meta(charset='UTF-8')
     meta(
         name='keywords',
-        content='portfolio Portfolio Portfolio Skillsets skills SKills skillsets skillset'
+        content='Framework Stylo Skillsets, Frameworks, Angular, ReactJS, Progress, Frameworks, Languages, Web Skills'
     )
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='author', content='Foss')
     meta(name='robots', content='index,nofollow')
     meta(
         name='description',
-        content='stylo portfolio website skillset page describing skills as well as progression nicely through pleasing user interface containing web skills like web frameworks front end and back end full stack as well'
+        content='Skills Offered By Stylo Includes Angular, React, Vue, Django, Laravel, Ruby On Rails'
     )
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    link(rel='canonical', href='https://stylo123.netlify.app')
 block title
-    | Skillset
+    | Stylo | The Unique Asthetic Portfolio | Skillsets Section
 block content
     .card-container
         h1 MY SKILLSETS
         .cards
             include ../components/skills.pug
-            +skill(32, "progress-1", "ReactJS", "Front End Framework",          "JavaScript/TypeScript"   ,"./assets/img/reactjs.png", "ReactJS Logo")
-            +skill(41, "progress-2", "VueJS", "Front-End Framework",            "TypeScript"   ,"./assets/img/vuejs.png", "VueJS Logo")
-            +skill(32, "progress-3", "Angular", "Front-End Framework",          "TypeScript"   ,"./assets/img/angular.png", "Angular Logo")
-            +skill(30, "progress-4", "Svelte", "Front-End Framework",           "JavaScript/TypeScript"   ,"./assets/img/svelte.png", "Svelte Logo")
-            +skill(40, "progress-5", "Astro", "Front-End Framework",            "JavaScript/TypeScript"   ,"./assets/img/astro.png", "Astro Logo")
-            +skill(40, "progress-6", "Ember", "Front-End Framework",            "JavaScript"   ,"./assets/img/ember.png", "Ember Logo")
-            +skill(70, "progress-25", "NextJS", "Front-End Framework",          "JavaScript/TypeScript"   ,"./assets/img/nextjs.png", "NextJS Logo")
-            +skill(50, "progress-7", "Vaadin Flow", "Front-End Framework",      "Java"   ,"./assets/img/flow.png", "Vaadin Flow Logo")
+            +skill(62, "progress-1", "ReactJS", "Front End Framework", "JavaScript/TypeScript" ,"./assets/img/reactjs.png", "ReactJS Logo")
+            +skill(41, "progress-2", "VueJS", "Front-End Framework", "TypeScript" ,"./assets/img/vuejs.png", "VueJS Logo")
+            +skill(42, "progress-3", "Angular", "Front-End Framework", "TypeScript" ,"./assets/img/angular.png", "Angular Logo")
+            +skill(47, "progress-4", "Svelte", "Front-End Framework", "JavaScript/TypeScript" ,"./assets/img/svelte.png", "Svelte Logo")
+            +skill(40, "progress-5", "Astro", "Front-End Framework", "JavaScript/TypeScript" ,"./assets/img/astro.png", "Astro Logo")
+            +skill(40, "progress-6", "Ember", "Front-End Framework", "JavaScript" ,"./assets/img/ember.png", "Ember Logo")
+            +skill(70, "progress-7", "NextJS", "Front-End Framework", "JavaScript/TypeScript" ,"./assets/img/nextjs.png", "NextJS Logo")
+            +skill(50, "progress-8", "Vaadin Flow", "Front-End Framework", "Java" ,"./assets/img/flow.png", "Vaadin Flow Logo")
 
-            +skill(80, "progress-31", "Lit Element", "Front-End Framework",     "JavaScript/TypeScript"   ,"./assets/img/lit.png", "Lit Element Logo")
-            +skill(90, "progress-8", "Bootstrap", "Style-End Framework",        "CSS/JavaScript"   ,"./assets/img/bootstrap.png", "BootStrap Logo")
-            +skill(70, "progress-9", "TailWind", "Style-End Framework",         "CSS/JavaScript"   ,"./assets/img/tailwindcss.png", "TailWind Logo")
-            +skill(60, "progress-10", "Foundation", "Style-End Framework",      "CSS/JavaScript"   ,"./assets/img/foundation.png", "Foundation Logo")
+            +skill(80, "progress-9", "Lit Element", "Front-End Framework", "JavaScript/TypeScript" ,"./assets/img/lit.png", "Lit Element Logo")
+            +skill(90, "progress-10", "Bootstrap", "Style-End Framework", "CSS/JavaScript" ,"./assets/img/bootstrap.png", "BootStrap Logo")
+            +skill(70, "progress-11", "TailWind", "Style-End Framework", "CSS/JavaScript" ,"./assets/img/tailwindcss.png", "TailWind Logo")
+            +skill(60, "progress-12", "Foundation", "Style-End Framework", "CSS/JavaScript" ,"./assets/img/foundation.png", "Foundation Logo")
 
-            +skill(47, "progress-11", "NestJS", "Back-End Framework",           "NodeJS/TypeScript"   ,"./assets/img/nestjs.png", "NestJS Logo")
-            +skill(48, "progress-12", "AdonisJS", "Back-End Framework",         "NodeJS/TypeScript"   ,"./assets/img/adonisjs.png", "AdonisJS Logo")
-            +skill(65, "progress-13", "Flask", "Back-End Framework",            "Python"   ,"./assets/img/flask.png", "Flask Logo")
-            +skill(77, "progress-14", "NodeJS", "Back-End JS Runtime",          "NodeJS"   ,"./assets/img/nodejs.png", "NodeJS Logo")
-            
-            +skill(45, "progress-15", "Fresh", "Full-Stack Framework",          "Deno"   ,"./assets/img/Fresh.png", "Fresh Logo")
-            +skill(60, "progress-16", "Laravel", "Full-Stack Framework",        "PHP"   ,"./assets/img/laravel.png", "Laravel Logo")
-            +skill(55, "progress-17", "Actix Web", "Full-Stack Framework",      "Rust"   ,"./assets/img/actixweb.png", "Actix Web Logo")
-            +skill(43, "progress-26", "Gin", "Full-Stack Framework",            "Golang"   ,"./assets/img/gin.png", "Gin Logo")
-            +skill(38, "progress-18", "Remix", "Full-Stack Framework",          "JavaScript/TypeScript"   ,"./assets/img/remix.png", "Remix Logo")
-            +skill(60, "progress-18", "Django", "Full-Stack Framework",         "Python"   ,"./assets/img/django.png", "Django Logo")
-            +skill(58, "progress-19", "Ruby On Rails", "Full-Stack Framework",  "Ruby"   ,"./assets/img/rubyonrails.png", "Ruby On Rails Logo")
-            +skill(30, "progress-24", "Phoenix", "Full-Stack Framework",        "Elixir"   ,"./assets/img/phoenix.png", "Phoenix Logo")
-            +skill(77, "progress-20", "PostgreSQL", "SQL Database",             "SQL"   ,"./assets/img/postgresql.png", "PostgreSQL Logo")
-            +skill(75, "progress-21", "MySQL", "SQL Database",                  "SQL"   ,"./assets/img/mysql.png", "MySQL Logo")
-            +skill(69, "progress-22", "MongoDB", "NoSQL Database",              "NoSQL"   ,"./assets/img/mongo.png", "MongoDB Logo")
-            +skill(59, "progress-23", "Redis", "NoSQL Database",                "NoSQL"   ,"./assets/img/redis.png", "Redis Logo")
+            +skill(47, "progress-13", "NestJS", "Back-End Framework", "NodeJS/TypeScript" ,"./assets/img/nestjs.png", "NestJS Logo")
+            +skill(48, "progress-14", "AdonisJS", "Back-End Framework", "NodeJS/TypeScript" ,"./assets/img/adonisjs.png", "AdonisJS Logo")
+            +skill(65, "progress-15", "Flask", "Back-End Framework", "Python" ,"./assets/img/flask.png", "Flask Logo")
+            +skill(77, "progress-16", "NodeJS", "Back-End JS Runtime", "NodeJS" ,"./assets/img/nodejs.png", "NodeJS Logo")
+
+            +skill(45, "progress-17", "Fresh", "Full-Stack Framework", "Deno" ,"./assets/img/Fresh.png", "Fresh Logo")
+            +skill(60, "progress-18", "Laravel", "Full-Stack Framework", "PHP" ,"./assets/img/laravel.png", "Laravel Logo")
+            +skill(55, "progress-19", "Actix Web", "Full-Stack Framework", "Rust" ,"./assets/img/actixweb.png", "Actix Web Logo")
+            +skill(43, "progress-20", "Gin", "Full-Stack Framework", "Golang" ,"./assets/img/gin.png", "Gin Logo")
+            +skill(38, "progress-21", "Remix", "Full-Stack Framework", "JavaScript/TypeScript" ,"./assets/img/remix.png", "Remix Logo")
+            +skill(60, "progress-22", "Django", "Full-Stack Framework", "Python" ,"./assets/img/django.png", "Django Logo")
+            +skill(58, "progress-23", "Ruby On Rails", "Full-Stack Framework", "Ruby" ,"./assets/img/rubyonrails.png", "Ruby On Rails Logo")
+            +skill(30, "progress-24", "Phoenix", "Full-Stack Framework", "Elixir" ,"./assets/img/phoenix.png", "Phoenix Logo")
+            +skill(77, "progress-25", "PostgreSQL", "SQL Database", "SQL" ,"./assets/img/postgresql.png", "PostgreSQL Logo")
+            +skill(75, "progress-26", "MySQL", "SQL Database", "SQL" ,"./assets/img/mysql.png", "MySQL Logo")
+            +skill(69, "progress-27", "MongoDB", "NoSQL Database", "NoSQL" ,"./assets/img/mongo.png", "MongoDB Logo")
+            +skill(59, "progress-28", "Redis", "NoSQL Database", "NoSQL" ,"./assets/img/redis.png", "Redis Logo")

@@ -8,16 +8,18 @@
 
 .footer {
     background-color: var(--navbar-background);
-    border-radius:5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
     color: var(--component-foreground);
     display: grid;
+    font-family: @roboto;
     gap: 10px;
     grid-template-columns: 1fr 2fr;
+    height: auto;
     margin-top: 5px;
     padding: 10px;
-    height: auto;
     width: var(--component-width);
 }
+
 .footer-social-media-section {
     align-items: center;
     background-color: var(--navbar-background);
@@ -102,25 +104,29 @@
         justify-content: space-between;
 
         header {
+            align-items: flex-start;
+            display: flex;
             font-family: @tangerine;
             font-size: 2.5em;
             letter-spacing: -2px;
             margin-bottom: 10px;
-            display: flex;
-            align-items: flex-start;
+
             img {
-                width: 40px;
                 height: 40px;
                 margin-right: 5px;
+                width: 40px;
             }
+
             sup {
                 font-size: 15px;
+
                 i {
                     color: inherit;
                 }
             }
         }
     }
+
     .footer-title-text {
         font-family: @merriweather;
     }
@@ -188,22 +194,15 @@
         a {
             align-items: center;
             color: inherit;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 4fr 1fr;
             text-decoration: none;
             transition: color, 200ms ease-in-out;
             width: 150px;
 
-            &:hover {
-                color: var(--footer-link-text-shadow-color);
-                filter: drop-shadow(
-                    0 0 20px var(--footer-link-text-shadow-color)
-                );
-                text-shadow: 0 0 20px var(--footer-link-text-shadow-color);
-                transition: color, text-shadow, filter 200ms ease-in-out;
-            }
-
             i {
-                margin-right: 10px;
+                margin: 0;
+                width: 15px !important;
             }
 
             #fiddle {
@@ -212,23 +211,7 @@
             }
 
             .external {
-                position: relative;
-            }
-
-            .external-1 {
-                left: 41px;
-            }
-
-            .external-2 {
-                left: 43px;
-            }
-
-            .external-3 {
-                left: 6px;
-            }
-
-            .external-4 {
-                left: 53px;
+                margin-left: 5px;
             }
         }
     }
@@ -268,5 +251,12 @@
     .footer-link-section {
         border: none;
         padding-right: 0;
+
+        .footer-link {
+            a {
+                grid-template-columns: 1fr 12fr 1fr;
+                width: 100%;
+            }
+        }
     }
 }

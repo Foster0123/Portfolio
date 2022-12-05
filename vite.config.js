@@ -13,8 +13,7 @@ export default defineConfig({
             input: {
                 index: resolve(__dirname, "./src/client/index.html/"),
                 about: resolve(__dirname, "./src/client/about.html/"),
-                progress: resolve(__dirname, "./src/client/progress.html/"),
-                resume: resolve(__dirname, "./src/client/resume.html/"),
+                progress: resolve(__dirname, "./src/client/skillset.html/"),
                 services: resolve(__dirname, "./src/client/services.html/")
             }
         }

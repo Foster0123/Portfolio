@@ -4,93 +4,109 @@
     --rotate-y: 0;
     --rotate-z: 0;
     --angle: 15deg;
+
     position: relative;
+
     .tilting-card-body {
+        align-items: center;
+        background-color: var(--component-background);
+        background-position: center;
+        background-size: cover;
         border-radius: 5px;
         box-shadow: 0 0 10px var(--navlist-background);
         display: flex;
-        align-items: center;
         flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        position: relative;
-        background-color: var(--component-background);
         inset: 0;
-        background-size: cover;
-        background-position: center;
+        justify-content: center;
+        position: relative;
+        text-align: center;
         transform: perspective(var(--perspective)) rotateX(var(--rotate-x))
             rotateY(var(--rotate-y)) rotateZ(var(--rotate-z));
         transition: transform 500ms ease;
+
         img {
             border-radius: 5px;
             height: auto;
             object-fit: cover;
             width: 100%;
         }
+
         h2 {
-            font-weight: medium;
             font-family: @opensans;
-            margin:2.5px 0 2.5px 0;
+            font-weight: medium;
+            margin: 2.5px 0;
         }
 
         h4 {
             font-family: @opensans;
             font-size: 0.9em;
-            margin:2.5px 0 2.5px 0;
+            margin: 2.5px 0;
         }
+
         h5 {
+            font-family: @opensans;
             font-weight: lighter;
-            margin:2.5px 0 2.5px 0;
+            font-weight: 900;
+            margin: 2.5px 0;
         }
+
         .card-progress {
+            align-items: center;
             display: flex;
             flex-direction: row-reverse;
-            align-items: center;
             justify-content: center;
             width: 95%;
+
             .progress {
+                appearance: none;
+                background: var(--progressbar-inner-color);
+                border: none;
+                border-radius: 10px;
+                height: 10px;
                 margin: 0;
                 padding: 0;
                 width: 90%;
-                height: 10px;
-                appearance: none;
-                border-radius: 10px;
-                border: none;
-                background: var(--progressbar-inner-color);
+
                 &::-webkit-progress-bar {
-                    border-radius: 10px;
                     background: var(--progressbar-inner-color);
+                    border-radius: 10px;
                 }
+
                 &::-webkit-progress-value {
                     background-color: var(--progressbar-outer-color);
                     border-radius: 10px;
                 }
+
                 &::-moz-progress-bar {
                     background-color: var(--progressbar-outer-color);
-                    border-radius: 10px;
                     border: none;
+                    border-radius: 10px;
                 }
             }
+
             label {
-                width: auto;
-                margin-left: 5px;
-                font-size: 1em;
-                font-family: @redhatmono;
                 color: yellowgreen;
+                font-family: @redhatmono;
+                font-size: 1em;
+                margin-left: 5px;
+                width: auto;
             }
         }
     }
 }
+
 .mouse-position-tracker {
+    height: calc(100% / 3);
     position: absolute;
     width: calc(100% / 3);
-    height: calc(100% / 3);
     z-index: 2;
 }
+
 /* 1st, 4th, 7th */
 .mouse-position-tracker:nth-child(3n - 2) {
     left: 0;
 }
+
 /* 2nd, 5th, 8th */
 .mouse-position-tracker:nth-child(3n - 1) {
     left: calc(100% / 3);
@@ -105,6 +121,7 @@
 .mouse-position-tracker:nth-child(n + 4):nth-child(-n + 6) {
     top: calc(100% / 3);
 }
+
 /* 7 to 9 */
 .mouse-position-tracker:nth-child(n + 7):nth-child(-n + 9) {
     bottom: 0;

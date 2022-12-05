@@ -1,15 +1,20 @@
 extends ../templates/base.pug
 
 block meta
-    meta(charset="UTF-8")
-    meta(name="keywords", content="Meta about stylo experience years development website portfolio")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(name="description", content="stylo portfolio about page containing details about the developer of portfolio as well as many other key points like full stack development, experience, years and frameworks")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    link(rel="canonical", href="stylo123.netlify.app/index/")
+    meta(charset='UTF-8')
+    meta(name='author', content='Foss')
+    meta(name='keywords', content='Stylo About Info Contact Me Portfolio')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(
+        name='description',
+        content='Information & Details Like Education , Experience, Personal Details & More'
+    )
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    meta(name='robots', content='index,nofollow')
+    link(rel='canonical', href='https://stylo123.netlify.app')
 
-block title 
-    | Stylo About
+block title
+    | Stylo | The Unique Asthetic Portfolio | About Me Details
 
 block content
     .about-container
@@ -19,14 +24,20 @@ block content
                     h1 About Me
                 .about-intro-content-section
                     .about-intro-content-image-section 
+                        |
+                        |
                         img.image(
                             src='./assets/img/hatman.svg',
                             alt='A Gentleman With A Hat And Formal Suit'
                         )
                     .about-intro-content-text-section 
+                        |
+                        |
                         p I am a Full-Stack Web Application Developer with 3 years of experience on Front-End & Back-End Programming as well as with different Front-End & Back-End Frameworks
             .about-info
                 .about-info-header-section 
+                    |
+                    |
                     h2 Info
                 .about-info-content-section
                     section
@@ -47,13 +58,24 @@ block content
                     section
                         strong Experience :
                         h4 3+ Years
+                    section
+                        strong Education :
+                        h4 High School
             .about-contact 
+                |
+                |
                 .about-contact-header-section
                     h2 Contact
                 .about-contact-content-section 
+                    |
+                    |
                     section 
+                        |
+                        |
                         strong Phone
                         h4 7044560210
                     section 
+                        |
+                        |
                         strong Email
                         h4 stylo29105@gmail.com

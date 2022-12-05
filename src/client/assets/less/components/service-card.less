@@ -1,103 +1,125 @@
 .service {
-    user-select: none;
     background-color: var(--component-background);
     border-radius: 10px;
     padding: 10px;
     position: relative;
     transition: box-shadow var(--transition-duration) ease-in-out;
+    user-select: none;
+
     &:hover {
         box-shadow: 0 0 5px var(--component-foreground);
         transition: box-shadow var(--transition-duration) ease-in-out;
     }
+
     #award {
-        font-size: 1.5em;
-        color: white;
-        position: absolute;
-        top: 5px;
-        right: 10px;
         background: var(--service-card-award-icon-color);
+        background-clip: text;
+        color: white;
         font-size: 1.5em;
         font-weight: 600;
-        background-clip: text;
+        position: absolute;
+        right: 10px;
         -webkit-text-fill-color: transparent;
+        top: 5px;
     }
+
     .service-section-header {
-        display: flex;
         align-items: center;
+        display: flex;
+
         i {
-            margin-right: 5px;
             background: var(--service-header-icon-color);
+            background-clip: text;
             font-size: 1.1em;
             font-weight: 600;
-            background-clip: text;
+            margin-right: 5px;
             -webkit-text-fill-color: transparent;
-            
         }
+
         header {
-            font-size: 1.3em;
             font-family: @opensans;
+            font-size: 1.3em;
         }
     }
+
     ul {
-        height: 100%;
-        list-style-type: none;
         display: flex;
         flex-direction: column;
+        height: 100%;
         justify-content: space-around;
+        list-style-type: none;
+
         li {
-            text-align: center;
-            margin: 5px 0 5px 0;
+            align-items: flex-start;
             display: flex;
-            font-weight: 900;
-            align-items:flex-start;
             font-family: @montserrat-alternates;
+            font-weight: 900;
+            margin: 5px 0;
+            text-align: center;
+
             i {
-                margin-top: 2px;
-                margin-left: 5px;
                 color: gold;
+                margin-left: 5px;
+                margin-top: 2px;
             }
         }
     }
 }
+
 .service-section-1 {
     grid-area: web;
+
     ul {
         li {
-            text-align: left !important;
             margin-left: 10px;
+            text-align: left !important;
+
             i {
                 background: var(--service-rocket-icon-color);
+                background-clip: text;
                 font-size: 0.9em;
                 margin-right: 10px;
-                background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
         }
     }
 }
+
 .service-section-2 {
-    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     grid-area: mobile;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
-.service-section-3 {
     text-align: center;
-    grid-area: desktop;
+}
+
+.service-section-3 {
+    align-items: center;
     display: flex;
     flex-direction: column;
+    grid-area: desktop;
     justify-content: center;
-    align-items: center;
+    text-align: center;
 }
+
+.service-section-4 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-area: blockchain;
+    justify-content: center;
+    text-align: center;
+}
+
 .cs-gradient {
     background: var(--service-cs-gradient-color);
+    background-clip: text;
     font-size: 1.1em;
     font-weight: 600;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 @media only screen and (max-width: 800px) {
     .service {
         box-shadow: 0 0 5px var(--component-foreground);

@@ -3,9 +3,11 @@ const linkList = document.getElementById('link-container')
 const themeBtn = document.getElementById('toggle-btn')
 const doc = document.documentElement
 
-var theme = localStorage.getItem('theme')
+var theme = localStorage.getItem('stylo123theme')
 const OSThemeDark = window.matchMedia('(prefers-color-scheme:dark').matches
 const OSThemeLight = window.matchMedia('(prefers-color-scheme:light').matches
+
+const diveBtn = document.getElementById('divebtn')
 
 window.addEventListener('load', () => {
     if (theme === 'dark') {
@@ -26,10 +28,10 @@ window.addEventListener('load', () => {
 themeBtn.addEventListener('click', () => {
     if (doc.classList.contains('dark-theme')) {
         doc.classList.remove('dark-theme')
-        localStorage.setItem('theme', 'light')
+        localStorage.setItem('stylo123theme', 'light')
     } else {
         doc.classList.add('dark-theme')
-        localStorage.setItem('theme', 'dark')
+        localStorage.setItem('stylo123theme', 'dark')
     }
 
     if (themeBtn.className === 'bi bi-moon') {

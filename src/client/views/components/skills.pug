@@ -19,4 +19,12 @@ mixin skill(progress, id, header, content, languages, imgSrc, imgAlt)
             .card-progress
                 label(for=id)
                     | #{ progress }%
-                progress.progress(id=id, value=progress, max=100)
+                progress.progress(
+                    id=id,
+                    value=progress,
+                    max=100,
+                    role='progressbar',
+                    aria-valuenow=progress,
+                    aria-valuemin='0',
+                    aria-valuemax='100'
+                )

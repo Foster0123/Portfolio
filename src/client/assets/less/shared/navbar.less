@@ -11,7 +11,7 @@
 
 .navbar {
     align-items: center;
-    // background: var(--navbar-background);
+    backdrop-filter: blur(2.5px);
     border-radius: 30px;
     color: var(--component-foreground);
     display: flex;
@@ -21,12 +21,9 @@
     top: 5px;
     width: var(--component-width);
     z-index: 10;
-    backdrop-filter: blur(2.5px);
 }
 
 .navbar-header-section {
-    position: relative;
-    top: 2px;
     align-items: flex-start;
     cursor: pointer;
     display: flex;
@@ -36,6 +33,8 @@
     margin-left: 10px;
     margin-right: 10px;
     outline: none;
+    position: relative;
+    top: 2px;
     transition: text-shadow var(--transition-duration) ease-in-out;
 
     &:hover {
@@ -45,10 +44,11 @@
         text-shadow: 0 0 20px var(--title-color);
         transition: text-shadow var(--transition-duration) ease-in-out;
     }
+
     img {
+        height: 40px;
         margin-right: 2.5px;
         width: 40px;
-        height: 40px;
     }
 }
 
@@ -197,9 +197,11 @@
     .navbar {
         width: calc(var(--component-width) - 1%);
     }
+
     .navbar-header-section {
         top: 0;
     }
+
     .navbar-link-section {
         align-items: center;
         background-color: var(--navbar-background);
@@ -289,10 +291,10 @@
 
     .navbar-btn-container {
         top: 9px;
+        transition: margin-right, var(--transition-duration) ease-in-out;
+
         .menu {
             display: inline-block;
         }
-
-        transition: margin-right, var(--transition-duration) ease-in-out;
     }
 }
