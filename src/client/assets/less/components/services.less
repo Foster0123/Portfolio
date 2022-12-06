@@ -1,34 +1,34 @@
 .services-container {
-    align-items: center;
-    color: var(--component-foreground);
-    display: flex;
-    justify-content: center;
+  align-items: center;
+  color: var(--component-foreground);
+  display: flex;
+  justify-content: center;
 }
 
 .services {
-    column-gap: 5px;
-    display: grid;
-    grid-auto-rows: minmax(250px, auto);
-    grid-gap: 5px;
-    grid-template-areas:
-        'web mobile'
-        'blockchain desktop';
-    grid-template-columns: repeat(2, 1fr);
-    margin: 5px 0;
-    width: var(--component-width);
-    width: 99%;
+  column-gap: 5px;
+  display: grid;
+  grid-auto-rows: minmax(250px, auto);
+  grid-gap: 5px;
+  grid-template-areas:
+    "web mobile"
+    "blockchain desktop";
+  grid-template-columns: repeat(2, 1fr);
+  margin: 5px 0;
+  width: var(--component-width);
+  width: 99%;
 }
 
 @media only screen and (max-width: 800px) {
-    .services {
-        column-gap: 10px;
-        grid-template-areas:
-            'web'
-            'mobile'
-            'desktop'
-            'blockchain';
-        grid-template-columns: repeat(1, 1fr);
-        row-gap: 10px;
-        width: 98%;
-    }
+  .services {
+    column-gap: 10px;
+    grid-template-areas:
+      "web"
+      "mobile"
+      "desktop"
+      "blockchain";
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 10px;
+    width: 98%;
+  }
 }

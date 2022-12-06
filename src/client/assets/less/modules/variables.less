@@ -1,89 +1,94 @@
 html {
-    // ------------------- > Dark Color Scheme < --------------------->
-    --dark-theme-component-foreground: #fbfaf5;
-    --dark-theme-component-background: #181818;
-    --dark-theme-global-foreground: #f8f8f8ec;
-    --dark-theme-global-background: #000000ec;
-    --dark-theme-nav-link-background: #1f1d1d;
-    --dark-theme-navbar-background: #fdf9f9;
-    // ------------------- > Light Color Scheme < --------------------->
-    --light-theme-component-foreground: #181818;
-    --light-theme-component-background: #fbfaf5;
-    --light-theme-global-foreground: #000000ec;
-    --light-theme-global-background: #f8f8f8ec;
-    --light-theme-nav-link-background: #fffc;
-    --light-theme-navbar-background: #fdf9f9;
+  // ------------------- > Dark Color Scheme < --------------------->
+  --dark-theme-component-foreground: #fbfaf5;
+  --dark-theme-component-background: #181818;
+  --dark-theme-global-foreground: #f8f8f8ec;
+  --dark-theme-global-background: #000000ec;
+  --dark-theme-nav-link-background: #1f1d1d;
+  --dark-theme-navbar-background: #fdf9f9;
+  // ------------------- > Light Color Scheme < --------------------->
+  --light-theme-component-foreground: #181818;
+  --light-theme-component-background: #fbfaf5;
+  --light-theme-global-foreground: #000000ec;
+  --light-theme-global-background: #f8f8f8ec;
+  --light-theme-nav-link-background: #fffc;
+  --light-theme-navbar-background: #fdf9f9;
 
-    // ------------------- > Static Colors < --------------------->
+  // ------------------- > Static Colors < --------------------->
 
-    --theme-button-background: white;
-    --navlist-background: gray;
-    --navlink-background: #a5a5a53f;
-    --header-title-text-shadow: rebeccapurple;
-    --theme-button-text-shadow: #000;
-    --yellowgreen-color: #9acd32;
-    --navlink-foreground: indigo;
-    --scrollbar-track-color: gray;
-    --scrollbar-thumb-color: #f0f8ff;
-    --progressbar-outer-color: #e5b8f4;
-    --progressbar-inner-color: linear-gradient(90deg, pink, purple);
-    --service-header-icon-color: linear-gradient(45deg, purple, orange);
-    --service-rocket-icon-color: linear-gradient(45deg, red, yellow);
-    --service-cs-gradient-color: linear-gradient(
-        45deg,
-        #ede342,
-        #f2bf6c,
-        #f69a97,
-        #fb76c1,
-        #ff51eb
+  --theme-button-background: white;
+  --navlist-background: gray;
+  --navlink-background: #a5a5a53f;
+  --header-title-text-shadow: rebeccapurple;
+  --theme-button-text-shadow: #000;
+  --yellowgreen-color: #9acd32;
+  --navlink-foreground: indigo;
+  --scrollbar-track-color: gray;
+  --scrollbar-thumb-color: #f0f8ff;
+  --progressbar-outer-color: #e5b8f4;
+  --progressbar-inner-color: linear-gradient(90deg, pink, purple);
+  --service-header-icon-color: linear-gradient(45deg, purple, orange);
+  --service-rocket-icon-color: linear-gradient(45deg, red, yellow);
+  --service-cs-gradient-color:
+    linear-gradient(
+      45deg,
+      #ede342,
+      #f2bf6c,
+      #f69a97,
+      #fb76c1,
+      #ff51eb
     );
-    --service-card-award-icon-color: linear-gradient(
-        45deg,
-        rgb(255 233 34),
-        gold
+  --service-card-award-icon-color:
+    linear-gradient(
+      45deg,
+      rgb(255 233 34),
+      gold
     );
-    --speedometer-color: linear-gradient(45deg, rgb(197 16 16), rgb(251 255 6));
-    --palette-color: linear-gradient(
-        to left,
-        violet,
-        indigo,
-        blue,
-        green,
-        yellow,
-        orange,
-        red
+  --speedometer-color: linear-gradient(45deg, rgb(197 16 16), rgb(251 255 6));
+  --palette-color:
+    linear-gradient(
+      to left,
+      violet,
+      indigo,
+      blue,
+      green,
+      yellow,
+      orange,
+      red
     );
-    --dollar-color: linear-gradient(45deg, rgb(85 148 85), rgb(211 211 46));
-    --headset-color: linear-gradient(45deg, skyblue, navy);
-    --shield-color: linear-gradient(45deg, lightblue, steelblue);
-    --progress-color: linear-gradient(45deg, lime, cyan);
-    --rank-color: linear-gradient(45deg, gold, goldenrod);
-    --maintenance-color: orangered;
-    --unittest-color: linear-gradient(45deg, yellowgreen, bisque);
+  --dollar-color: linear-gradient(45deg, rgb(85 148 85), rgb(211 211 46));
+  --headset-color: linear-gradient(45deg, skyblue, navy);
+  --shield-color: linear-gradient(45deg, lightblue, steelblue);
+  --progress-color: linear-gradient(45deg, lime, cyan);
+  --rank-color: linear-gradient(45deg, gold, goldenrod);
+  --maintenance-color: orangered;
+  --unittest-color: linear-gradient(45deg, yellowgreen, bisque);
 
-    // ------------------- > Shared Colors < --------------------->->
-    --component-foreground: #181818;
-    --component-background: #fbfaf5;
-    --global-foreground: #0000;
-    --global-background: #f8f8f8ec;
-    --navbar-background: #e9e6e6;
-    --intro-card-background: linear-gradient(
-        45deg,
-        rgb(255 255 255 / 50%),
-        rgb(255 255 255 / 80%)
+  // ------------------- > Shared Colors < --------------------->->
+  --component-foreground: #181818;
+  --component-background: #fbfaf5;
+  --global-foreground: #0000;
+  --global-background: #f8f8f8ec;
+  --navbar-background: #e9e6e6;
+  --intro-card-background:
+    linear-gradient(
+      45deg,
+      rgb(255 255 255 / 50%),
+      rgb(255 255 255 / 80%)
     );
-    --index-header-text-color: linear-gradient(
-        to right,
-        rgb(0 0 0 / 60%),
-        rgb(0 0 0 / 90%)
+  --index-header-text-color:
+    linear-gradient(
+      to right,
+      rgb(0 0 0 / 60%),
+      rgb(0 0 0 / 90%)
     );
-    // ---------------------------------------->
-    --transition-duration: 200ms;
-    --component-width: 99.5%;
-    --scrollbar-width: 7px;
-    --component-border-radius: 5px 5px 10px 10px;
-    --top-link-border-radius: 20px 20px 0 0;
-    --bottom-link-border-radius: 0 0 20px 20px;
-    --mobile-navlist-width: 160px;
-    --about-section-titles-font-size: 1.6em;
+  // ---------------------------------------->
+  --transition-duration: 200ms;
+  --component-width: 99.5%;
+  --scrollbar-width: 7px;
+  --component-border-radius: 5px 5px 10px 10px;
+  --top-link-border-radius: 20px 20px 0 0;
+  --bottom-link-border-radius: 0 0 20px 20px;
+  --mobile-navlist-width: 160px;
+  --about-section-titles-font-size: 1.6em;
 }
