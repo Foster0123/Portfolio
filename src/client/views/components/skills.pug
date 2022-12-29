@@ -16,15 +16,15 @@ mixin skill(progress, id, header, content, languages, imgSrc, imgAlt)
                 h2 #{ header }
                 h4 #{ content }
                 h5 #{ languages }
-            .card-progress
-                label(for=id)
-                    | #{ progress }%
-                progress.progress(
-                    id=id,
-                    value=progress,
-                    max=100,
-                    role='progressbar',
-                    aria-valuenow=progress,
-                    aria-valuemin='0',
-                    aria-valuemax='100'
-                )
+            //- .card-progress
+            //-     label(for=id)
+            //-         | #{ progress }%
+            //-     progress.progress(
+            //-         id=id,
+            //-         value=progress,
+            //-         max=100,
+            //-         role='progressbar',
+            //-         aria-valuenow=progress,
+            //-         aria-valuemin='0',
+            //-         aria-valuemax='100'
+            //-     )

@@ -1,0 +1,91 @@
+.works-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+        text-align: center;
+        color: var(--component-foreground);
+    }
+    .works {
+        display: grid;
+        column-gap: 5px;
+        row-gap: 5px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-columns: minmax(400px, auto);
+        grid-auto-rows: minmax(250px, auto);
+        width: 99%;
+        
+
+        .work-section {
+            background-color: var(--component-background);
+            color: var(--component-foreground);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid rgb(255, 254, 254);
+            box-shadow: 0 0 2.5px black;
+            font-family: @opensans;
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr 4fr;
+            
+            img {
+                width: 100px;
+                height: 100px;
+                margin-right: 10px;
+            }
+            .work-section-content {
+                display: flex;
+                flex-direction: column;
+                font-size: 0.85em;
+                text-align: left;
+                h4 {
+                    margin: 2.5px 0;
+                }
+                ul {
+                    margin:5px;
+                    li {
+                        font-size: 0.9em;
+                        margin-left: 25px;
+                        font-weight: 600;
+                        padding: 1.5px 0;
+                    }
+                }
+                a {
+                    font-size: 1em;
+                    margin-top: 5px;
+                    color: var(--component-foreground);
+                    text-decoration: none;
+                    font-weight:600;
+                    width: 140px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    &:hover {
+                        color: yellowgreen;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .works-container {
+        .works {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .works-container {
+        .works {
+            .work-section {
+                img {
+                    margin-right: 0px!important;
+                    margin: 5px 0;
+                }
+            }
+            
+        }
+    }
+}
